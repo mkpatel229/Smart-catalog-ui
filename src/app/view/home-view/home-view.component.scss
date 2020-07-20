@@ -8,8 +8,8 @@
 .sidebar{
     // grid-area: sidebar;
     font-family: 'Ubuntu', sans-serif;
-    color: whitesmoke;
-    background-color: rgb(1, 161, 189);
+    color: black;
+    // background-color: rgb(1, 161, 189);
     box-shadow: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
     min-width: 300px;
 }
@@ -43,7 +43,7 @@
     .cards{
         display: grid;
         grid-template-columns: repeat(4,1fr);
-        grid-gap: 25px;
+        grid-gap: 20px;
         padding: 25px;
         // border: 2px solid red;
         // background-color: rgb(236, 191, 214);
