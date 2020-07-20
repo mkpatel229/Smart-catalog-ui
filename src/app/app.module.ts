@@ -9,13 +9,15 @@ import { HomeViewComponent } from './view/home-view/home-view.component';
 import { LoginViewComponent } from './view/login-view/login-view.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { FormsModule } from '@angular/forms';
+import { CardComponent } from './view/home-view/card/card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeViewComponent,
-    LoginViewComponent
+    LoginViewComponent,
+    CardComponent
   ],
   imports: [
     FormsModule,
