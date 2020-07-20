@@ -1,0 +1,30 @@
+<header class="navbar" id="navbar">
+    <h2>Smart Catalog</h2>
+    <div class="navButton" id="navBtn">
+        <a class="active item">
+            Home
+        </a>
+        <a class="item">
+            AWS
+        </a>
+        <a class="item">
+            Azure
+        </a>
+        <a class="item">
+            GCP
+        </a>
+    </div>
+
+    <div class="btns">
+        <span id="greeting">Welcome User</span>
+        <button >
+            Contact Us
+        </button>
+        <button [routerLink]="['/login']">
+            Logout
+        </button>
+    </div>
+</header>
+<div class="container" id="view">
+    <router-outlet></router-outlet>
+</div>

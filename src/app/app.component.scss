@@ -1,0 +1,84 @@
+.navbar {
+    display: grid;
+    justify-content: space-between;
+    // flex-direction: row;
+    grid-template-columns: 3fr 3fr 3fr;
+    padding: 5px;
+    // border: 2px solid black;
+    background-color: #673ab7;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    width: 100%;
+    position: fixed;
+    position: -webkit-sticky;
+    top: 0px;
+    left: 0px;
+    height: 78px;
+    z-index: 99999;
+    box-shadow: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+    h2 {
+        // margin: 10px;
+        display: block;
+        font-size: 1.5em;
+        font-weight: bold;
+        font-family: 'ubuntu';
+        align-self: flex-end;
+        align-self: center;
+    }
+
+    .navButton {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        a{
+            line-height: 40px;
+            font-size: 1.5em;
+            // border: 2px solid red;
+        }
+        a:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .active{
+            text-decoration: underline;
+        }
+        .item{
+            margin: 10px;
+        }
+    }
+
+    .btns{
+        display: flex;
+        width: auto;
+        justify-content: flex-end;
+        align-content: center;
+    }
+
+}
+
+#greeting{
+    font-size: 25px;
+    margin-right: 15px;
+    align-self: center;
+}
+
+
+.container{
+    // border: 2px solid black;
+    padding-top: 78px;
+    background-color:whitesmoke;
+    min-height: calc( 100vh -78px);
+}
+
+button{
+    align-self: center;
+    height: 38px;
+    width: 90px;
+    border-radius: 5px;
+    font-family: 'ubuntu';
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(204, 204, 204);
+}

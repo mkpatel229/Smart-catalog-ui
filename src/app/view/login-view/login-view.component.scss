@@ -1,0 +1,55 @@
+
+.login-container {
+    height: 100vh;
+    display: grid;
+    background-color: #673ab7;
+}
+
+.login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    align-self: center;
+    background-color: white;
+    width: 50%;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+    .ele_img{
+        display: grid;
+        justify-content: center;
+        align-content: center;
+
+    }
+    .ele{
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        grid-template-rows: 1fr 40px 40px 40px 1fr;
+        width: 100%;
+        gap: 20px;
+        h1{
+            margin: auto;
+            text-align: center;
+        }
+        .item{
+            width: 350px;
+            text-align: center;
+        }
+        input{
+            border: 0px;
+            border-radius: 15px;
+            background-color: whitesmoke;
+            
+        }
+        button{
+            border: 0px;
+            border-radius: 15px;
+            background-color: yellowgreen;
+            box-shadow: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+        }
+        button:hover{
+            cursor: pointer;
+        }
+    }
+}

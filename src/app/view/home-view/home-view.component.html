@@ -1,0 +1,75 @@
+<div class="grid">
+    <div class="sidebar">
+        <form class="fillter">
+            <div class="dropdown">
+                <span class="item">Choose Cloud operator</span>
+                <!-- <select class="item">
+                <option class="li">
+                    ------select one------
+                </option>
+                <option class="li">
+                    AWS
+                </option>
+                <option class="li">
+                    Azure
+                </option>
+                <option class="li">
+                    GCP
+                </option>
+            </select> -->
+                <ng-multiselect-dropdown [settings]="dropdownSettings" [placeholder]="'------select one------'" 
+                    [data]="dropdownListProvider"
+                    [(ngModel)]="selectedItemsProvider" name="provider"  (onSelect)="onItemSelect($event)"
+                    (onSelectAll)="onSelectAll($event)">
+                </ng-multiselect-dropdown>
+            </div>
+            <div class="dropdown">
+                <span class="item">Category</span>
+                <!-- <select class="item">
+                    <option class="li">
+                        ------select one------
+                    </option>
+                    <option class="li">
+                        Compute
+                    </option>
+                    <option class="li">
+                        Database
+                    </option>
+                    <option class="li">
+                        Storage
+                    </option>
+                </select> -->
+                <ng-multiselect-dropdown [settings]="dropdownSettings" [placeholder]="'------select one------'" 
+                [data]="dropdownListCategory"
+                [(ngModel)]="selectedItemsCategory" name="category"  (onSelect)="onItemSelect($event)"
+                (onSelectAll)="onSelectAll($event)">
+            </ng-multiselect-dropdown>
+            </div>
+        </form>
+    </div>
+
+    <div class="main">
+        <div class="cards">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+</div>

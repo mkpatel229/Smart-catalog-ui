@@ -1,0 +1,83 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    min-height: 100vh;
+    // grid-template-columns: 1fr 7fr;
+}
+
+.sidebar{
+    // grid-area: sidebar;
+    font-family: 'Ubuntu', sans-serif;
+    color: whitesmoke;
+    background-color: rgb(1, 161, 189);
+    box-shadow: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+}
+
+.fillter{
+    margin: 0px;
+    height: 100vh;
+    // border: 2px solid white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    .dropdown{
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        .item{
+            margin: 10px;
+        }
+        select{
+            font-size: 20px;
+            text-align-last: center;
+        }
+
+    }
+}
+
+.main{
+    // grid-area: main;
+    font-family: 'Ubuntu', sans-serif;
+    display: grid;
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 25px;
+        padding: 25px;
+        // border: 2px solid red;
+        // background-color: rgb(236, 191, 214);
+        min-height: 45vh;
+        .item{
+            // border: 2px solid green;
+            background-color: #cdf0ff;
+            min-height: 250px;
+            width: 322px;
+            box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+        }
+    }
+}
+
+::ng-deep .multiselect-dropdown{
+    background-color: white;
+    color: black;
+    font-size: large;
+    position: static !important;
+
+    .selected-item{
+        height: 30px !important;
+        font-size: small !important;
+    }
+    .dropdown-down{
+        border-top: 8px solid #adadad !important;
+        border-left: 6px solid transparent !important;
+        border-right: 6px solid transparent !important;
+    }
+    .dropdown-btn{
+        background-color: white !important;
+        border: 1px solid #000000 !important;
+        border-radius: 0px !important;
+    }
+    .dropdown-list{
+        position: static !important;
+    }
+  }
