@@ -2,7 +2,7 @@
     <div class="sidebar">
         <form class="fillter">
             <div class="dropdown">
-                <span class="item">Choose Cloud operator</span>
+                <span class="item">Cloud Provider</span>
                 <!-- <select class="item">
                 <option class="li">
                     ------select one------
@@ -19,8 +19,8 @@
             </select> -->
                 <ng-multiselect-dropdown [settings]="dropdownSettings" [placeholder]="'------select one------'" 
                     [data]="dropdownListProvider"
-                    [(ngModel)]="selectedItemsProvider" name="provider"  (onSelect)="onItemSelect($event)"
-                    (onSelectAll)="onSelectAll($event)">
+                    [(ngModel)]="selectedItemsProvider" name="provider"  (onSelect)="onProviderSelect($event)"
+                    (onSelectAll)="onProviderSelectAll($event)">
                 </ng-multiselect-dropdown>
             </div>
             <div class="dropdown">
@@ -41,8 +41,8 @@
                 </select> -->
                 <ng-multiselect-dropdown [settings]="dropdownSettings" [placeholder]="'------select one------'" 
                 [data]="dropdownListCategory"
-                [(ngModel)]="selectedItemsCategory" name="category"  (onSelect)="onItemSelect($event)"
-                (onSelectAll)="onSelectAll($event)">
+                [(ngModel)]="selectedItemsCategory" name="category"  (onSelect)="onCategorySelect($event)"
+                (onSelectAll)="onCategorySelectAll($event)">
             </ng-multiselect-dropdown>
             </div>
         </form>
@@ -50,26 +50,11 @@
 
     <div class="main">
         <div class="cards">
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
+            <app-card class="item"
+                *ngFor = "let item of serviceListCopy"
+                [service] = "item"
+            ></app-card>
+                    
         </div>
     </div>
 </div>

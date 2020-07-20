@@ -11,6 +11,7 @@
     color: whitesmoke;
     background-color: rgb(1, 161, 189);
     box-shadow: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+    min-width: 300px;
 }
 
 .fillter{
@@ -46,14 +47,7 @@
         padding: 25px;
         // border: 2px solid red;
         // background-color: rgb(236, 191, 214);
-        min-height: 45vh;
-        .item{
-            // border: 2px solid green;
-            background-color: #cdf0ff;
-            min-height: 250px;
-            width: 322px;
-            box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
-        }
+        min-height: 300px;
     }
 }
 
