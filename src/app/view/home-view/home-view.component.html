@@ -1,54 +1,41 @@
 <div class="grid">
     <div class="sidebar">
+        <div id="title">
+            <h1>
+                Filter
+            </h1>
+            <!-- <div class = "sorting">
+                <h2 *ngIf="!asc" (click)="sort()" class="fa fa-sort-amount-asc fa-2x"></h2>
+                <h2 *ngIf="asc" (click)="sort()" class="fa fa-sort-amount-desc fa-2x"></h2>
+            </div> -->
+        </div>
         <form class="fillter">
             <div class="dropdown">
                 <span class="item">Cloud Provider</span>
-                <!-- <select class="item">
-                <option class="li">
-                    ------select one------
-                </option>
-                <option class="li">
-                    AWS
-                </option>
-                <option class="li">
-                    Azure
-                </option>
-                <option class="li">
-                    GCP
-                </option>
-            </select> -->
                 <ng-multiselect-dropdown [settings]="dropdownSettings" [placeholder]="'------select one------'" 
                     [data]="dropdownListProvider"
                     [(ngModel)]="selectedItemsProvider" name="provider"  (onSelect)="onProviderSelect($event)"
-                    (onSelectAll)="onProviderSelectAll($event)">
+                    (onSelectAll)="onProviderSelectAll($event)"
+                    (click) = "Providerchange(selectedItemsProvider)">
                 </ng-multiselect-dropdown>
             </div>
             <div class="dropdown">
                 <span class="item">Category</span>
-                <!-- <select class="item">
-                    <option class="li">
-                        ------select one------
-                    </option>
-                    <option class="li">
-                        Compute
-                    </option>
-                    <option class="li">
-                        Database
-                    </option>
-                    <option class="li">
-                        Storage
-                    </option>
-                </select> -->
                 <ng-multiselect-dropdown [settings]="dropdownSettings" [placeholder]="'------select one------'" 
                 [data]="dropdownListCategory"
                 [(ngModel)]="selectedItemsCategory" name="category"  (onSelect)="onCategorySelect($event)"
-                (onSelectAll)="onCategorySelectAll($event)">
+                (onSelectAll)="onCategorySelectAll($event)"
+                (click) = "Categorychange(selectedItemsCategory)">
             </ng-multiselect-dropdown>
             </div>
         </form>
     </div>
 
     <div class="main">
+        <div class = "sorting">
+            <button *ngIf="!asc" (click)="sort()" class="fa fa-sort-amount-asc fa-2x"></button>
+            <button *ngIf="asc" (click)="sort()" class="fa fa-sort-amount-desc fa-2x"></button>
+        </div>
         <div class="cards">
             <app-card class="item"
                 *ngFor = "let item of serviceListCopy"

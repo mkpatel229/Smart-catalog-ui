@@ -1,6 +1,15 @@
-<div class="card">
-    <h2 class="item" id="title">{{service.providerName}}</h2>
-    <h3 class="item">{{service.serviceName}}</h3>
-    <h3 class="item">{{service.category}}</h3>
-    <h3 class="item">{{service.description}}</h3>
+<div class="card card1">
+    <div class="item" id="title">
+        <h4 class="item sub">{{service.providerName}}</h4>
+        <h2 class="item main">{{service.serviceName}}</h2>
+    </div>
+    <h3 class="item desc">{{service.description}}</h3>
+    <div class="footer">
+        <h3 class="item">{{service.category}}</h3>
+        <div class="footer">
+            <h3 class="fa fa-star fa-lg" id="star"></h3>
+            <h3 id="rating">{{service.rating}}</h3>
+        </div>       
+    </div>
+    
 </div>

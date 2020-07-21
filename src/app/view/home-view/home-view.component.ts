@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import {Service} from '../../service'
+import {CloudService} from '../../service/cloud.service'
 
 @Component({
   selector: 'app-home-view',
@@ -8,6 +9,8 @@ import {Service} from '../../service'
   styleUrls: ['./home-view.component.scss']
 })
 export class HomeViewComponent implements OnInit {
+
+  asc:boolean = false;
 
   dropdownListProvider = [];
   selectedItemsProvider = [];
@@ -17,8 +20,10 @@ export class HomeViewComponent implements OnInit {
 
   serviceList: Service[];
   serviceListCopy: Service[];
+  serviceFilterProvider: Service[];
+  serviceFilterCategory: Service[];
 
-  constructor() { 
+  constructor(private cloudService:CloudService) { 
     
   }
 
@@ -47,53 +52,60 @@ export class HomeViewComponent implements OnInit {
     ];
     this.selectedItemsCategory = [];
 
-    this.serviceList = [
-      {
-        serviceName : "EC2",
-        category : "Compute",
-        providerName : "AWS",
-        description : "AWS provide VM"
-      },
-      {
-        serviceName : "VM",
-        category : "Compute",
-        providerName : "Azure",
-        description : "Azure provide VM"
-      },
-      {
-        serviceName : "Compute Engine",
-        category : "Compute",
-        providerName : "GCP",
-        description : "GCP provide VM"
-      },
-      {
-        serviceName : "Compute Engine",
-        category : "Compute",
-        providerName : "GCP",
-        description : "GCP provide VM"
-      },
-      {
-        serviceName : "Compute Engine",
-        category : "Compute",
-        providerName : "GCP",
-        description : "GCP provide VM"
-      }
-    ];
+    this.serviceList = this.cloudService.getService();
     this.serviceListCopy = this.serviceList
+    this.serviceFilterProvider = this.serviceList
+    this.serviceFilterCategory = this.serviceList
+  }
+
+  sort(){
+    console.log(this.asc)
+    if(this.asc){
+      this.serviceListCopy.sort((one,two)=>{return one.rating>two.rating?-1:1});
+      this.asc = !this.asc;
+    }
+    else{
+      this.serviceListCopy.sort((one,two)=>{return one.rating>two.rating?1:-1});
+      this.asc = !this.asc;
+    }
   }
 
   onProviderSelect(item: any) {
-    this.serviceListCopy = this.serviceList.filter(p => p.providerName === item.item_text)
-    console.log(this.serviceList);
+    //this.serviceListCopy = this.serviceList.filter(p => p.providerName === item.item_text)
+    //console.log(this.serviceList);
   }
   onProviderSelectAll(items: any) {
-    console.log(items);
+    //console.log(items);
   }
   onCategorySelect(item: any) {
-    console.log(item);
+    //console.log(item);
   }
   onCategorySelectAll(items: any) {
-    console.log(items);
+    //console.log(items);
+  }
+  Providerchange(item:any){
+    if(item.length != 0){
+      this.serviceFilterProvider = this.serviceList.filter(p => item.some(i=>i.item_text==p.providerName));
+      this.serviceListCopy = this.serviceFilterProvider;
+      this.Categorychange([]);
+      this.selectedItemsCategory = []
+    }
+    else{
+      this.serviceListCopy = this.serviceList;
+      this.serviceFilterProvider = this.serviceListCopy;
+      this.Categorychange([]);
+      this.selectedItemsCategory = []
+    }
+  }
+  Categorychange(item:any){
+    if(item.length != 0){
+      this.serviceFilterCategory = this.serviceFilterProvider.filter(p => item.some(i=>i.item_text==p.category));
+      this.serviceListCopy = this.serviceFilterCategory;
+    }
+    else{
+      this.serviceListCopy = this.serviceFilterProvider;
+      this.serviceFilterCategory = this.serviceListCopy;
+    }
   }
 
 }

@@ -7,16 +7,41 @@
 
 .sidebar{
     // grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
     font-family: 'Ubuntu', sans-serif;
     color: black;
-    // background-color: rgb(1, 161, 189);
+    padding-top: 88px;
+    background-color: rgb(238, 238, 238);
     box-shadow: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
     min-width: 300px;
 }
-
+#title{
+    text-align: center;
+    background-color: wheat;
+}
+.sorting{
+    height: 50dp;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 10px;
+    padding-right: 15px;
+    justify-content: flex-end;
+    button{
+        padding: 0px;
+        margin: 0px 10px;
+        height: 100%;
+        width: 4%;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+}
 .fillter{
     margin: 0px;
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
     // border: 2px solid white;
     font-size: 20px;
     display: flex;
@@ -39,12 +64,12 @@
 .main{
     // grid-area: main;
     font-family: 'Ubuntu', sans-serif;
-    display: grid;
     .cards{
         display: grid;
         grid-template-columns: repeat(4,1fr);
         grid-gap: 20px;
         padding: 25px;
+        padding-top: 0px;
         // border: 2px solid red;
         // background-color: rgb(236, 191, 214);
         min-height: 300px;
@@ -60,6 +85,7 @@
     .selected-item{
         height: 30px !important;
         font-size: small !important;
+        background: #00838d !important;
     }
     .dropdown-down{
         border-top: 8px solid #adadad !important;
