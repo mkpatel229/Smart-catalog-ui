@@ -5,18 +5,150 @@
     align-content: center;
     justify-content: stretch;
     height: 350px;
-    width: 320px;
+    width: 100%;
     box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
     .item{
         width: 100%;
-        text-align: center;
         padding: 15px;
         margin: 0px;
-
+        font-family: 'Baloo Da 2', cursive;
         // background-color: rgb(250, 247, 236);
     }
+
+}
+
+.card2 {
+    display: block;
+    top: 0px;
+    position: relative;
+    max-width: 262px;
+    background-color: #f2f8f9;
+    border-radius: 4px;
+    padding: 32px 24px;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    border: 1px solid #f2f8f9;
+  
+    &:hover {
+      transition: all 0.2s ease-out;
+      box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+      top: -4px;
+      border: 1px solid #cccccc;
+      background-color: white;
+    }
+  
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -16px;
+      right: -16px;
+      background: #00838d;
+      height: 32px;
+      width: 32px;
+      border-radius: 32px;
+      transform: scale(2);
+      transform-origin: 50% 50%;
+      transition: transform 0.15s ease-out;
+    }
+  
+    &:hover:before {
+      transform: scale(2.15);
+    }
+  }
+
+  .card1 {
+    display: block;
+    position: relative;
+    height: 350px;
+    background-color: #f2f8f9;
+    border-radius: 4px;
+    padding: 32px 0px;
+    // margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
     #title{
         // border: 1px groove black;
         background-color: wheat;
     }
-}
+    .item{
+        width: 100%;
+        padding: 15px;
+        margin: 0px;
+        font-family: 'Baloo Da 2', cursive;
+        // background-color: rgb(250, 247, 236);
+    }
+    .sub{
+        margin: 0px;
+        padding: 0px;
+        line-height: 1;
+        text-align: end;
+        font-weight: 500;
+        font-size: 23px;
+    }
+    .main{
+        margin: 0px;
+        padding: 0px;
+        line-height: 1;
+
+    }
+    .desc{
+        line-height: 1;
+        white-space: pre-wrap;
+        overflow: hidden;
+        height: 180px;
+        font-weight: 100;
+        text-align: left;
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .fa{
+        margin: 0px;
+        padding: 15px;
+        align-self: center;
+    }
+    #rating{
+        justify-self: start;
+        align-self: center;
+        font-weight: 100;
+    }
+    #star{
+        justify-self: end;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: -16px;
+      right: -16px;
+      background: #00838d;
+      height: 32px;
+      width: 32px;
+      border-radius: 32px;
+      transform: scale(2);
+      transform-origin: 50% 50%;
+      transition: transform 0.25s ease-out;
+    }
+  
+    &:hover:before {
+      transform: scale(32);
+    }
+  }
+  
+  .card1:hover {
+    cursor: pointer;
+    p {
+      transition: all 0.3s ease-out;
+      color: rgba(255, 255, 255, 0.8);
+    }
+    h3 {
+      transition: all 0.3s ease-out;
+      color: #ffffff;
+    }
+  }

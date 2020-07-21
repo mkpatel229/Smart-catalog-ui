@@ -3,4 +3,5 @@ export class Service {
     providerName:String;
     category:String;
     description:string;
+    rating:number;
 }
