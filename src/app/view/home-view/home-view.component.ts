@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
-import {Service} from '../../service'
+import {Service} from '../../Model/service'
 import {CloudService} from '../../service/cloud.service'
 
 @Component({

@@ -1,14 +1,16 @@
-<div class="card card1">
+<div class="card1" [class]="service.category">
     <div class="item" id="title">
-        <h4 class="item sub">{{service.providerName}}</h4>
+        <h2 class="item sub">{{service.providerName}}</h2>
         <h2 class="item main">{{service.serviceName}}</h2>
     </div>
     <h3 class="item desc">{{service.description}}</h3>
     <div class="footer">
-        <h3 class="item">{{service.category}}</h3>
+        <h4 class="item">{{service.category}}</h4>
         <div class="footer">
-            <h3 class="fa fa-star fa-lg" id="star"></h3>
-            <h3 id="rating">{{service.rating}}</h3>
+            <h4 id="rating">{{service.rating}}</h4>
+            <span class="stars">
+                <span [style.width] = "getStars()"></span>
+            </span>
         </div>       
     </div>
     
