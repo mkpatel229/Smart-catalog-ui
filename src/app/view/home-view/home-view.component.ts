@@ -11,6 +11,7 @@ import {CloudService} from '../../service/cloud.service'
 export class HomeViewComponent implements OnInit {
 
   asc:boolean = false;
+  errorMessage:string;
 
   dropdownListProvider = [];
   selectedItemsProvider = [];
@@ -18,13 +19,17 @@ export class HomeViewComponent implements OnInit {
   selectedItemsCategory = [];
   dropdownSettings:IDropdownSettings;
 
-  serviceList: Service[];
+  serviceList: any = [];
   serviceListCopy: Service[];
   serviceFilterProvider: Service[];
   serviceFilterCategory: Service[];
 
   constructor(private cloudService:CloudService) { 
-    
+    this.cloudService.getServices().subscribe(service => {
+      this.cloudService.service = service;
+      this.serviceList=this.cloudService.service;
+      this.serviceListCopy=this.serviceList;
+    } ,error => this.errorMessage = <any>error);
   }
 
   ngOnInit(): void {
@@ -50,9 +55,7 @@ export class HomeViewComponent implements OnInit {
       { item_id: 2, item_text: 'Database' },
       { item_id: 3, item_text: 'Storage' }
     ];
-    this.selectedItemsCategory = [];
-
-    this.serviceList = this.cloudService.getService();
+    this.selectedItemsCategory = []; 
     this.serviceListCopy = this.serviceList
     this.serviceFilterProvider = this.serviceList
     this.serviceFilterCategory = this.serviceList

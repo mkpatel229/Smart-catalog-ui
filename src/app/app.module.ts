@@ -10,6 +10,9 @@ import { LoginViewComponent } from './view/login-view/login-view.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { FormsModule } from '@angular/forms';
 import { CardComponent } from './view/home-view/card/card.component';
+import { ServiceDetailComponent } from './view/service-detail/service-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CloudService } from './service/cloud.service';
 
 
 @NgModule({
@@ -17,9 +20,11 @@ import { CardComponent } from './view/home-view/card/card.component';
     AppComponent,
     HomeViewComponent,
     LoginViewComponent,
-    CardComponent
+    CardComponent,
+    ServiceDetailComponent
   ],
   imports: [
+    HttpClientModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,
@@ -27,7 +32,7 @@ import { CardComponent } from './view/home-view/card/card.component';
     MatSidenavModule,
     NgMultiSelectDropDownModule.forRoot()
   ],
-  providers: [],
+  providers: [CloudService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

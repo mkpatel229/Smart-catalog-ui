@@ -1,4 +1,5 @@
 export class Service {
+    id:number;
     serviceName:String;
     providerName:String;
     category:String;

@@ -1,4 +1,4 @@
-<div class="card1" [class]="service.category">
+<div class="card1" [class]="service.category" [routerLink]="['/detail/'+service.id]">
     <div class="item" id="title">
         <h2 class="item sub">{{service.providerName}}</h2>
         <h2 class="item main">{{service.serviceName}}</h2>
@@ -12,6 +12,5 @@
                 <span [style.width] = "getStars()"></span>
             </span>
         </div>       
-    </div>
-    
+    </div>  
 </div>
