@@ -3,8 +3,6 @@
     display: grid;
     grid-template-rows: repeat(4,1fr);
     align-content: center;
-    justify-content: stretch;
-    height: 350px;
     width: 100%;
     box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
     .item{
@@ -45,7 +43,7 @@
       z-index: -1;
       top: -16px;
       right: -16px;
-      background: #00838d;
+      background: #673ab7;
       height: 32px;
       width: 32px;
       border-radius: 32px;
@@ -59,87 +57,96 @@
     }
   }
 
-  .card1 {
-    display: block;
-    position: relative;
-    height: 350px;
-    background-color: #f2f8f9;
-    border-radius: 4px;
-    padding: 32px 0px;
-    // margin: 12px;
-    text-decoration: none;
-    z-index: 0;
-    overflow: hidden;
-    #title{
-        // border: 1px groove black;
-        background-color: wheat;
-    }
-    .item{
-        width: 100%;
-        padding: 15px;
-        margin: 0px;
-        font-family: 'Baloo Da 2', cursive;
-        // background-color: rgb(250, 247, 236);
-    }
-    .sub{
-        margin: 0px;
-        padding: 0px;
-        line-height: 1;
-        text-align: end;
-        font-weight: 500;
-        font-size: 23px;
-    }
-    .main{
-        margin: 0px;
-        padding: 0px;
-        line-height: 1;
-
-    }
-    .desc{
-        line-height: 1;
-        white-space: pre-wrap;
-        overflow: hidden;
-        height: 180px;
-        font-weight: 100;
-        text-align: left;
-    }
-    .footer{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    .fa{
-        margin: 0px;
-        padding: 15px;
-        align-self: center;
-    }
-    #rating{
-        justify-self: start;
-        align-self: center;
-        font-weight: 100;
-    }
-    #star{
-        justify-self: end;
-    }
-
-    &:before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      top: -16px;
-      right: -16px;
-      background: #00838d;
-      height: 32px;
-      width: 32px;
-      border-radius: 32px;
-      transform: scale(2);
-      transform-origin: 50% 50%;
-      transition: transform 0.25s ease-out;
-    }
-  
-    &:hover:before {
-      transform: scale(32);
-    }
+.card1 {
+  display: grid;
+  //grid-template-rows: repeat(4,1fr);
+  align-content: center;
+  width: 100%;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  position: relative;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 0px 0px 0px;
+  // margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  #title{
+      // border: 1px groove black;
+      background-color: wheat;
   }
+  .item{
+      width: 100%;
+      padding: 10px;
+      margin: 0px;
+      font-family: 'Baloo Da 2', cursive;
+      align-self: center;
+      // background-color: rgb(250, 247, 236);
+  }
+  .sub{
+      margin: 0px;
+      padding: 0px;
+      line-height: 1;
+      text-align: end;
+      font-weight: 500;
+      font-size: 1.1em;
+  }
+  .main{
+      margin: 0px;
+      padding: 0px;
+      line-height: 1;
+      font-size: 1.2em;
+  }
+  .desc{
+      line-height: 1.2;
+      white-space: pre-wrap;
+      overflow: hidden;
+      height: 10em;
+      font-weight: 100;
+      text-align: left;
+      font-size: 0.9em;
+  }
+  .footer{
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+  }
+  .fa{
+      margin: 0px;
+      padding: 15px;
+      align-self: center;
+  }
+  #rating{
+      justify-self: end;
+      align-self: center;
+      font-weight: 100;
+  }
+  #star{
+      justify-self: end;
+  }
+
+  &:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #df6464;
+
+    // .database{
+    //   background-color: #673ab7
+    // }
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(32);
+  }
+}
   
   .card1:hover {
     cursor: pointer;
@@ -147,8 +154,80 @@
       transition: all 0.3s ease-out;
       color: rgba(255, 255, 255, 0.8);
     }
-    h3 {
+    h3 , h4{
       transition: all 0.3s ease-out;
       color: #ffffff;
     }
+    #title{
+      transition: all 0.3s ease-out;
+      background-color: #ffffff;
+    }
   }
+
+  .Compute::before{
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #25bfb5;
+
+    // .database{
+    //   background-color: #673ab7
+    // }
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+  .Storage::before{
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #3367d6;
+
+    // .database{
+    //   background-color: #673ab7
+    // }
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+  .Database::before{
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #df6464;
+
+    // .database{
+    //   background-color: #673ab7
+    // }
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(2);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+span.stars, span.stars span {
+    display: block;
+    justify-self: center;
+    align-self: center;
+   /* Download the star image here: http://stackoverflow.com/questions/1987524/turn-a-number-into-star-rating-display-using-jquery-and-css */
+    background: url('../../../../assets/stars.png') 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+    background-position: 0 0;
+}

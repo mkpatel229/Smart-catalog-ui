@@ -1,13 +1,9 @@
 <div class="grid">
     <div class="sidebar">
         <div id="title">
-            <h1>
-                Filter
-            </h1>
-            <!-- <div class = "sorting">
-                <h2 *ngIf="!asc" (click)="sort()" class="fa fa-sort-amount-asc fa-2x"></h2>
-                <h2 *ngIf="asc" (click)="sort()" class="fa fa-sort-amount-desc fa-2x"></h2>
-            </div> -->
+            <h4>
+                Filters
+            </h4>
         </div>
         <form class="fillter">
             <div class="dropdown">
@@ -33,8 +29,8 @@
 
     <div class="main">
         <div class = "sorting">
-            <button *ngIf="!asc" (click)="sort()" class="fa fa-sort-amount-asc fa-2x"></button>
-            <button *ngIf="asc" (click)="sort()" class="fa fa-sort-amount-desc fa-2x"></button>
+            <button *ngIf="!asc" (click)="sort()" class="fa fa-sort-amount-asc fa-lg"></button>
+            <button *ngIf="asc" (click)="sort()" class="fa fa-sort-amount-desc fa-lg"></button>
         </div>
         <div class="cards">
             <app-card class="item"
