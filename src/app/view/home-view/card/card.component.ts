@@ -23,4 +23,10 @@ export class CardComponent implements OnInit {
 
   }
 
+  openDetail()  
+  {  
+    var url = '/detail/'+ this.service.id; 
+     window.open(url);  
+  }
+
 }

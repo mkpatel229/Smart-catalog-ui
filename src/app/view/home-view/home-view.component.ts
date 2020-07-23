@@ -28,7 +28,9 @@ export class HomeViewComponent implements OnInit {
     this.cloudService.getServices().subscribe(service => {
       this.cloudService.service = service;
       this.serviceList=this.cloudService.service;
-      this.serviceListCopy=this.serviceList;
+      this.serviceListCopy = this.serviceList
+      this.serviceFilterProvider = this.serviceList
+      this.serviceFilterCategory = this.serviceList
     } ,error => this.errorMessage = <any>error);
   }
 
@@ -56,9 +58,6 @@ export class HomeViewComponent implements OnInit {
       { item_id: 3, item_text: 'Storage' }
     ];
     this.selectedItemsCategory = []; 
-    this.serviceListCopy = this.serviceList
-    this.serviceFilterProvider = this.serviceList
-    this.serviceFilterCategory = this.serviceList
   }
 
   sort(){
