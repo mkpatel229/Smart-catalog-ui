@@ -8,9 +8,7 @@
         <h4 class="item">{{service.category}}</h4>
         <div class="footer">
             <h4 id="rating">{{service.rating}}</h4>
-            <span class="stars">
-                <span [style.width] = "getStars()"></span>
-            </span>
+            <rating-star  TotalStar = '5' [value] = 'service.rating' color = 'gold'></rating-star>
         </div>       
     </div>  
 </div>

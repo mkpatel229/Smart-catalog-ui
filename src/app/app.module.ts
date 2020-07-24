@@ -13,6 +13,8 @@ import { CardComponent } from './view/home-view/card/card.component';
 import { ServiceDetailComponent } from './view/service-detail/service-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CloudService } from './service/cloud.service';
+import { RatingModule } from 'ng-starrating';
+import { RatingStarComponent } from './rating-star/rating-star.component';
 
 
 @NgModule({
@@ -21,9 +23,11 @@ import { CloudService } from './service/cloud.service';
     HomeViewComponent,
     LoginViewComponent,
     CardComponent,
-    ServiceDetailComponent
+    ServiceDetailComponent,
+    RatingStarComponent
   ],
   imports: [
+    RatingModule,
     HttpClientModule,
     FormsModule,
     BrowserModule,

@@ -7,7 +7,7 @@
         </div>
         <div class="body">
             <div class="body_item" id="category"><h2>{{service.category}}</h2></div>
-            <div class="body_item" id="rating"><h2>{{service.rating}}</h2></div>
+            <div class="body_item" id="rating"><rating-star  TotalStar = '5' size = 'fa-lg' [value] = 'service.rating' color = 'gold'></rating-star></div>
             <div class="body_item" id="tabs">
                 <div class="tab_item" [class]='desc' (click)='openTabDesc()'>Description</div>
                 <div class="tab_item" [class]='spec' (click)='openTabSpec()'>Specification</div>
