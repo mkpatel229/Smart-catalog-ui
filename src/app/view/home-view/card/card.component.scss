@@ -108,7 +108,7 @@
   }
   .footer{
       display: grid;
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 1fr 1.3fr;
   }
   .fa{
       margin: 0px;
@@ -222,7 +222,6 @@ span.stars, span.stars span {
     display: block;
     justify-self: center;
     align-self: center;
-   /* Download the star image here: http://stackoverflow.com/questions/1987524/turn-a-number-into-star-rating-display-using-jquery-and-css */
     background: url('../../../../assets/stars.png') 0 -16px repeat-x;
     width: 80px;
     height: 16px;
@@ -230,4 +229,9 @@ span.stars, span.stars span {
 
 span.stars span {
     background-position: 0 0;
+}
+
+rating-star{
+  align-self: center;
+  justify-self: center;
 }

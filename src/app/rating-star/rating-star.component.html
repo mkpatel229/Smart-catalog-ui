@@ -1,0 +1,16 @@
+<div class="container">
+    <div class = "stars" *ngFor = 'let number of numbers'>
+        <div class="stars"> 
+            <i *ngIf = 'rating[2*number]==1 ' class="fa fa-star" [class]="size" [style.color]='color'></i>
+            <div *ngIf = 'rating[2*number+1]==1' class = "stars">   
+                <i class="fa fa-star-half-o" [class]="size" [style.color]='color'></i>
+            </div>
+            <div *ngIf = 'rating[2*number]==0' class="stars">
+                <i *ngIf = 'number==0 && half' class="fa fa-star-half-o" [class]="size" [style.color]='color'></i>
+                <i *ngIf = 'number!=0 || !half' class="fa fa-star-o" [class]="size" [style.color]='color'></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
