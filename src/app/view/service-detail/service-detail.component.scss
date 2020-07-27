@@ -1,4 +1,7 @@
-.container{
+@import "~bootswatch/dist/pulse/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/pulse/bootswatch";
+.container_css{
     display: grid;
     // grid-template-columns: repeat( auto-fill, minmax(300px, 100%) );
     // border: 2px solid black;
@@ -23,14 +26,13 @@
 h1{
     margin: 0px;
     align-self: center;
-    font-size: 2em;
+    // font-size: 2em;
 }
 
 .title{
     display: grid;
     grid-template-columns: repeat( auto-fit, minmax(290px, 1fr) );
     height: 8em;
-    background-color: wheat;
     align-content: center;
     padding: 0px 80px;
 }
@@ -48,12 +50,13 @@ h1{
         margin: 0px;
     }
     #tabs{
-        grid-column: 1 / span 2;
+        grid-column: 1/span 2;
         display: grid;
         grid-template-columns: auto auto auto;
-        grid-template-rows: auto 1fr ;
+        grid-template-rows: auto 1fr;
         justify-content: start;
-        align-self: start;
+        align-self: center;
+        margin-top: 20px;
         .tab_item{
             margin: 0px 10px 0px 0px;
             padding: 15px;

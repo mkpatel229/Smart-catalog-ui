@@ -1,14 +1,16 @@
-<div class="card1" [class]="service.category" (click)="openDetail()">
-    <div class="item" id="title">
+<div class=" card border-primary mb-3" [class]="service.category" (click)="openDetail()">
+    <div class="item card-header" id="title">
         <h2 class="item sub">{{service.providerName}}</h2>
-        <h2 class="item main">{{service.serviceName}}</h2>
+        <h2 class="item main ">{{service.serviceName}}</h2>
     </div>
-    <h3 class="item desc">{{service.description}}</h3>
-    <div class="footer">
-        <h4 class="item">{{service.category}}</h4>
+    <div class="card-body">
+        <p class="item desc card-text text-primary">Get on-demand, highly scalable and protected virtualised. Lorem, ipsum dolor sit amet consectetur adipisicing elit. A neque dicta voluptas amet. Animi veritatis natus esse explicabo laboriosam accusamus, placeat aliquam, porro harum quibusdam dolorum amet adipisci, et sunt!</p>
         <div class="footer">
-            <h4 id="rating">{{service.rating}}</h4>
-            <rating-star  TotalStar = '5' [value] = 'service.rating' color = 'gold'></rating-star>
-        </div>       
-    </div>  
+            <h5 class="item">{{service.category}}</h5>
+            <div class="footer">
+                <h5 id="rating">{{service.rating}}</h5>
+                <rating-star  TotalStar = '5' [value] = 'service.rating' color = 'gold'></rating-star>
+            </div>       
+        </div>  
+    </div>
 </div>

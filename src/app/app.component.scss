@@ -1,90 +1,108 @@
-.navbar {
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 5px 25px;
-    background-color: #673ab7;
-    color: white;
-    font-family: "Ubuntu", sans-serif;
-    width: 100%;
-    position: fixed;
-    position: -webkit-sticky;
-    top: 0px;
-    left: 0px;
-    height: 51px;
-    z-index: 99999;
-    box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
-    h3 {
-        margin: 0px;
-        align-self: center;
-    }
-    h3:hover{
-        cursor: pointer;
-    }
+@import "~bootswatch/dist/Pulse/variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootswatch/dist/Pulse/bootswatch";
+// .navbar {
+//     display: grid;
+//     justify-content: space-between;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     padding: 5px 25px;
+//     background-color: #673ab7;
+//     color: white;
+//     font-family: "Ubuntu", sans-serif;
+//     width: 100%;
+//     position: fixed;
+//     position: -webkit-sticky;
+//     top: 0px;
+//     left: 0px;
+//     height: 51px;
+//     z-index: 99999;
+//     box-shadow: 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+//     h3 {
+//         margin: 0px;
+//         align-self: center;
+//     }
+//     h3:hover{
+//         cursor: pointer;
+//     }
 
-    .navButton {
-        display: flex;
-        align-self: center;
-        justify-content: center;
-        a{
-            line-height: 40px;
-            font-size: 1.5em;
-            text-decoration: none;
-            color: white;
-            // border: 2px solid red;
-        }
-        a:hover{
-            cursor: pointer;
-            text-decoration: underline;
-        }
-        .active{
-            text-decoration: underline;
-        }
-        .item{
-            margin: 0px 10px;
-            font-size: 18px;
-        }
-    }
+//     .navButton {
+//         display: flex;
+//         align-self: center;
+//         justify-content: center;
+//         a{
+//             line-height: 40px;
+//             font-size: 1.5em;
+//             text-decoration: none;
+//             color: white;
+//             // border: 2px solid red;
+//         }
+//         a:hover{
+//             cursor: pointer;
+//             text-decoration: underline;
+//         }
+//         .active{
+//             text-decoration: underline;
+//         }
+//         .item{
+//             margin: 0px 10px;
+//             font-size: 18px;
+//         }
+//     }
 
-    .btns{
-        display: flex;
-        width: auto;
-        justify-content: flex-end;
-        align-content: center;
-    }
+//     .btns{
+//         display: flex;
+//         width: auto;
+//         justify-content: flex-end;
+//         align-content: center;
+//     }
 
-}
+// }
 
-#greeting{
-    font-size: 18px;
-    margin-right: 15px;
-    align-self: center;
-}
+// #greeting{
+//     font-size: 18px;
+//     margin-right: 15px;
+//     align-self: center;
+// }
 
 
-.container{
+
+
+// button{
+//     align-self: center;
+//     height: 30px;
+//     width: 85px;
+//     border-radius: 5px;
+//     font-family: 'ubuntu';
+// }
+
+// button:hover{
+//     cursor: pointer;
+//     background-color: rgb(204, 204, 204);
+// }
+
+// #title{
+//     font-size: 1.5em;
+//     text-decoration: none;
+//     color: white;
+//     align-self: center;;
+// }
+
+.container_css{
     // border: 2px solid black;
-    padding-top: 51px;
+    padding-top: 61px;
     background-color:whitesmoke;
     min-height: calc( 100vh -51px);
 }
 
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 99999;
+    height: 61px;
+}
+
 button{
-    align-self: center;
-    height: 30px;
-    width: 85px;
-    border-radius: 5px;
-    font-family: 'ubuntu';
-}
-
-button:hover{
-    cursor: pointer;
-    background-color: rgb(204, 204, 204);
-}
-
-#title{
-    font-size: 1.5em;
-    text-decoration: none;
-    color: white;
-    align-self: center;;
+    margin: 10px;
 }

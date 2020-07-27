@@ -1,11 +1,11 @@
-<div class="container">
-    <div class="detail">
-        <div class="title">
+<div class="container_css">
+    <div class="detail ">
+        <div class="title card-header">
             <h1>{{service.serviceName}}</h1>
             <img class="image" [src]="imgUrl">
         </div>
         <div class="body">
-            <div class="body_item" id="category"><h2>{{service.category}}</h2></div>
+            <div class="body_item" id="category"><h4>{{service.category}}</h4></div>
             <div class="body_item" id="rating">
                 <rating-star  TotalStar = '5' size = 'fa-lg' [value] = 'service.rating' color = 'gold'></rating-star>
             </div>
@@ -15,7 +15,80 @@
                 <div class="tab_item" [class]='review'  (click)='openTabRevire()'>Reviews</div>
             </div>
             <div *ngIf="desc =='active'" class="tab_content">{{service.description}} Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita corrupti nam nesciunt maiores similique, modi numquam illum est magni? Eveniet illum quaerat iure. Rerum similique expedita nulla ullam pariatur illo?</div>
-            <div *ngIf="spec =='active'" class="tab_content">Specification details</div>
+            <div *ngIf="spec =='active'" class="tab_content">
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th scope="col">Type</th>
+                        <th scope="col">Column heading</th>
+                        <th scope="col">Column heading</th>
+                        <th scope="col">Column heading</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="table-active">
+                        <th scope="row">Active</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Default</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                      </tr>
+                      <tr class="table-active">
+                        <th scope="row">Primary</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                      </tr>
+                      <tr >
+                        <th scope="row">Secondary</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                      </tr>
+                      <tr class="table-active">
+                        <th scope="row">Success</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                      </tr>
+                      <tr >
+                        <th scope="row">Danger</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                      </tr>
+                      <tr class="table-active">
+                        <th scope="row">Warning</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                      </tr>
+                      <tr >
+                        <th scope="row">Info</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                      </tr>
+                      <tr class="table-active">
+                        <th scope="row">Light</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                      </tr>
+                      <tr >
+                        <th scope="row">Dark</th>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                      </tr>
+                    </tbody>
+                  </table> 
+            </div>
             <div *ngIf="review =='active'" class="tab_content">Reviews & Comments</div>
         </div>
     </div>

@@ -1,30 +1,32 @@
 <div class="grid">
     <div class="sidebar">
         <div id="title">
-            <h4>
+            <!-- <h4>
                 Filters
-            </h4>
+            </h4> -->
         </div>
-        <form class="fillter">
-            <div class="dropdown">
-                <span class="item">Cloud Provider</span>
-                <ng-multiselect-dropdown [settings]="dropdownSettings" [placeholder]="'------select one------'" 
-                    [data]="dropdownListProvider"
-                    [(ngModel)]="selectedItemsProvider" name="provider"  (onSelect)="onProviderSelect($event)"
-                    (onSelectAll)="onProviderSelectAll($event)"
-                    (click) = "Providerchange(selectedItemsProvider)">
+        <div class="fillter">
+            <form>
+                <div class="dropdown">
+                    <span class="item">Cloud Provider</span>
+                    <ng-multiselect-dropdown [settings]="dropdownSettings" 
+                        [data]="dropdownListProvider"
+                        [(ngModel)]="selectedItemsProvider" name="provider"  (onSelect)="onProviderSelect($event)"
+                        (onSelectAll)="onProviderSelectAll($event)"
+                        (click) = "Providerchange(selectedItemsProvider)">
+                    </ng-multiselect-dropdown>
+                </div>
+                <div class="dropdown">
+                    <span class="item">Category</span>
+                    <ng-multiselect-dropdown [settings]="dropdownSettings" 
+                    [data]="dropdownListCategory"
+                    [(ngModel)]="selectedItemsCategory" name="category"  (onSelect)="onCategorySelect($event)"
+                    (onSelectAll)="onCategorySelectAll($event)"
+                    (click) = "Categorychange(selectedItemsCategory)">
                 </ng-multiselect-dropdown>
-            </div>
-            <div class="dropdown">
-                <span class="item">Category</span>
-                <ng-multiselect-dropdown [settings]="dropdownSettings" [placeholder]="'------select one------'" 
-                [data]="dropdownListCategory"
-                [(ngModel)]="selectedItemsCategory" name="category"  (onSelect)="onCategorySelect($event)"
-                (onSelectAll)="onCategorySelectAll($event)"
-                (click) = "Categorychange(selectedItemsCategory)">
-            </ng-multiselect-dropdown>
-            </div>
-        </form>
+                </div>
+            </form>
+        </div>       
     </div>
 
     <div class="main">
@@ -35,9 +37,8 @@
         <div class="cards">
             <app-card class="item"
                 *ngFor = "let item of serviceListCopy"
-                [service] = "item"
-            ></app-card>
-                    
+                [service] = "item">
+            </app-card> 
         </div>
     </div>
 </div>
