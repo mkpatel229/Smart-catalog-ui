@@ -10,10 +10,12 @@ export class CardComponent implements OnInit {
 
   @Input() service: Service;
   rating:number;
+  imgUrl:string = "../../../../assets/";
 
   constructor() { }
 
   ngOnInit(): void {
+    this.imgUrl = this.imgUrl + this.service.providerName + ".jpg";
   }
 
   getStars(){

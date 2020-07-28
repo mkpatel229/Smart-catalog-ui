@@ -1,14 +1,13 @@
 <div class="container_css">
-    <div class="detail ">
-        <div class="title card-header">
-            <h1>{{service.serviceName}}</h1>
+    <div class="detail">
+        <div class="title">
             <img class="image" [src]="imgUrl">
+            <div class="header">
+              <h1>{{service.serviceName}}</h1>
+              <h4>{{service.category}}</h4>
+            </div>
         </div>
         <div class="body">
-            <div class="body_item" id="category"><h4>{{service.category}}</h4></div>
-            <div class="body_item" id="rating">
-                <rating-star  TotalStar = '5' size = 'fa-lg' [value] = 'service.rating' color = 'gold'></rating-star>
-            </div>
             <div class="body_item" id="tabs">
                 <div class="tab_item" [class]='desc' (click)='openTabDesc()'>Description</div>
                 <div class="tab_item" [class]='spec' (click)='openTabSpec()'>Specification</div>
@@ -90,6 +89,13 @@
                   </table> 
             </div>
             <div *ngIf="review =='active'" class="tab_content">Reviews & Comments</div>
+
+            <div class="footer">
+              <div class="body_item" id="category"><h4>{{service.category}}</h4></div>
+              <div class="body_item" id="rating">
+                  <rating-star  TotalStar = '5' size = 'fa-lg' [value] = 'service.rating' color = 'gold'></rating-star>
+              </div>
+            </div>
         </div>
     </div>
 </div>
