@@ -5,4 +5,5 @@ export class Service {
     category:String;
     description:string;
     rating:number;
+    specifications:any;
 }

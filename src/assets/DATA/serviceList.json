@@ -62,5 +62,69 @@
       "providerName" : "AWS",
       "description" : "AWS Lambda is an event-driven, serverless computing platform provided by Amazon as a part of Amazon Web Services. It is a computing service that runs code in response to events and automatically manages the computing resources required by that code. It was introduced in November 2014.",
       "rating": 5.0
+    },
+    {
+      "id" : 9,
+      "serviceName" : "Amazon Aurora",
+      "category" : "Database",
+      "providerName" : "AWS",
+      "description" : "Amazon Aurora is a relational database service developed and offered by Amazon Web Services beginning in October 2014. Aurora is available as part of the Amazon Relational Database Service.",
+      "rating": 3.5
+    },
+    {
+      "id" : 10,
+      "serviceName" : "Azure SQL Database",
+      "category" : "Database",
+      "providerName" : "Azure",
+      "description" : "Microsoft Azure SQL Database is a managed cloud database provided as part of Microsoft Azure. A cloud database is a database that runs on a cloud computing platform, and access to it is provided as a service. Managed database services take care of scalability, backup, and high availability of the database. ",
+      "rating": 4.5
+    },
+    {
+      "id" : 11,
+      "serviceName" : "GCP (E2)",
+      "category" : "Compute",
+      "providerName" : "GCP",
+      "description" : "General-purpose virtual machines are the workhorses of cloud applications. Today, we’re excited to announce our E2 family of VMs for Google Compute Engine featuring dynamic resource management to deliver reliable and sustained performance, flexible configurations, and the best total cost of ownership of any of our VMs.  ",
+      "rating": 2.0
+    },
+    {
+      "id" : 12,
+      "serviceName" : "Cloud Storage",
+      "category" : "Storage",
+      "providerName" : "GCP",
+      "description" : "Google Cloud Storage is a RESTful online file storage web service for storing and accessing data on Google Cloud Platform infrastructure. The service combines the performance and scalability of Google's cloud with advanced security and sharing capabilities. It is an Infrastructure as a Service (IaaS), comparable to Amazon S3 online storage service. Contrary to Google Drive and according to different service specifications, Google Cloud Storage appears to be more suitable for enterprises.",
+      "rating": 5.0
+    },
+    {
+      "id" : 13,
+      "serviceName" : "Filestore",
+      "category" : "Storage",
+      "providerName" : "GCP",
+      "description" : "Filestore offers low latency for file operations. For workloads that are latency sensitive, like electronic design automation (EDA), media rendering, data analytics, or other metadata intensive applications, Filestore supports capacity up to 320 TB and throughput of 16 GB/s and 480K IOPS, with minimal variability in performance.",
+      "rating": 3.0
+    },
+    {
+      "id" : 14,
+      "serviceName" : "Amazon S3",
+      "category" : "Storage",
+      "providerName" : "AWS",
+      "description" : "Amazon Simple Storage Service (Amazon S3) is an object storage service that offers industry-leading scalability, data availability, security, and performance. This means customers of all sizes and industries can use it to store and protect any amount of data for a range of use cases, such as websites, mobile applications, backup and restore, archive, enterprise applications, IoT devices, and big data analytics. Amazon S3 provides easy-to-use management features so you can organize your data and configure finely-tuned access controls to meet your specific business, organizational, and compliance requirements.",
+      "rating": 4.0
+    },
+    {
+      "id" : 15,
+      "serviceName" : "Azure Data Lake Storage",
+      "category" : "Storage",
+      "providerName" : "Azure",
+      "description" : "Azure Data Lake Storage Gen2 is a highly scalable and cost-effective data lake solution for big data analytics. It combines the power of a high-performance file system with massive scale and economy to help you speed your time to insight. Data Lake Storage Gen2 extends Azure Blob Storage capabilities and is optimised for analytics workloads. Data Lake Storage Gen2 is the most comprehensive data lake available.",
+      "rating": 4.5
+    },
+    {
+      "id" : 16,
+      "serviceName" : "Azure NetApp Files",
+      "category" : "Storage",
+      "providerName" : "Azure",
+      "description" : "Running performance-intensive and latency-sensitive file workloads in the cloud can be hard. Azure NetApp Files makes it easy for enterprise line-of-business (LOB) and storage professionals to migrate and run complex, file-based applications with no code change. Azure NetApp Files is widely used as the underlying shared file-storage service in various scenarios. These include migration (lift and shift) of POSIX-compliant Linux and Windows applications, SAP HANA, databases, high-performance compute (HPC) infrastructure and apps and enterprise web applications.",
+      "rating": 1.0
     }
   ]

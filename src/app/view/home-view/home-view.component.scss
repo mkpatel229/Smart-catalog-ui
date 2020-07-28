@@ -1,3 +1,4 @@
+
 .grid{
     display: grid;
     grid-template-columns: minmax(250px, 1fr) 6fr;
@@ -14,13 +15,15 @@
     padding-top: 76px;
     background-color: rgb(238, 238, 238);
     box-shadow: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+    
 }
 #title{
-    text-align: center;
-    background-color: wheat;
     font-size: 1.1em;
+    top: 105px;
+    width: 16.25em;
+    position: fixed;
     h4{
-        margin: 20px;
+        margin: 18px;
     }
 }
 .sorting{
@@ -32,7 +35,7 @@
     justify-content: flex-end;
     button{
         padding: 0px;
-        margin: 0px 10px;
+        margin: 0px 28px;
         height: 1.2em;
         width: 2em;
     }
@@ -42,16 +45,22 @@
 }
 .fillter{
     margin: 0px;
-    min-height: 100vh;
-    width: 100%;
-    // border: 2px solid white;
+    height: 65vh;
+    position: fixed;
+    width: 20em;
+    top: 147px;
     font-size: 0.9em;
     display: flex;
     flex-direction: column;
+    overflow: overlay;
+    form{
+        height: inherit;
+    }
     .dropdown{
         display: flex;
         flex-direction: column;
-        margin: 10px;
+        margin: 20px 10px;
+        width: 90%;
         .item{
             margin: 10px;
         }
@@ -68,14 +77,10 @@
     font-family: 'Ubuntu', sans-serif;
     .cards{
         display: grid;
-        grid-template-columns: repeat( auto-fill, minmax(290px, 1fr) );
-        // grid-gap: 20px;
-        grid-column-gap: 1.2em;
-        grid-row-gap: 5em;
-        padding: 25px;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5em;
+        padding: 3em;
         padding-top: 0px;
-        // border: 2px solid red;
-        // background-color: rgb(236, 191, 214);
     }
 }
 
@@ -88,7 +93,6 @@
     .selected-item{
         height: 30px !important;
         font-size: small !important;
-        background: #00838d !important;
     }
     .dropdown-down{
         border-top: 8px solid #adadad !important;

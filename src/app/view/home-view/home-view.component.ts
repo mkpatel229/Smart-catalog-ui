@@ -58,6 +58,8 @@ export class HomeViewComponent implements OnInit {
       { item_id: 3, item_text: 'Storage' }
     ];
     this.selectedItemsCategory = []; 
+
+    console.log(this.dropdownListProvider)
   }
 
   sort(){
