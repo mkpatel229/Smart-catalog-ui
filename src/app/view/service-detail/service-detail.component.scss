@@ -29,9 +29,9 @@
 .title{
     display: grid;
     grid-template-columns: 20% 80%;
-    height: 12em;
+    height: 8em;
     align-content: end;
-    padding: 0px 80px;
+    padding: 0px 60px;
 }
 
 .header{
@@ -48,7 +48,7 @@
 }
 
 .body{
-    padding: 1em 80px 5em 80px;
+    padding: 1em 60px 5em 60px;
     text-align: justify;
     // min-height: 100vh;
     display: grid;
