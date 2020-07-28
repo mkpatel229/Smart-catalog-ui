@@ -44,8 +44,6 @@ export class AppComponent {
   ]
 
   constructor() {
-    let temp = this.Services.filter(p => p.Comments = p.Comments.filter(c=>c.Comment==="XYZ"));
-    console.log(temp);
   }
 
   ngOnInit(){
