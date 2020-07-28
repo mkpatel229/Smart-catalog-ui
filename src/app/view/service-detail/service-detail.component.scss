@@ -14,8 +14,13 @@
     display: grid;
     // border: 2px solid red;
     background-color: white;
+<<<<<<< Updated upstream
     max-width: 85vw;
     min-width: 85vw;
+=======
+    max-width: 55vw;
+    min-width: 55vw;
+>>>>>>> Stashed changes
     margin: 1em 0em 6em 0em;
     // padding: 3em;
     box-shadow: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
@@ -29,9 +34,9 @@
 .title{
     display: grid;
     grid-template-columns: 20% 80%;
-    height: 12em;
+    height: 8em;
     align-content: end;
-    padding: 0px 80px;
+    padding: 0px 60px;
 }
 
 .header{
@@ -48,7 +53,7 @@
 }
 
 .body{
-    padding: 1em 80px 5em 80px;
+    padding: 1em 60px 5em 60px;
     text-align: justify;
     min-height: 100vh;
     display: grid;
