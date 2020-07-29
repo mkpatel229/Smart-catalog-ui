@@ -1,104 +1,102 @@
-<div class="navLink">
-  <h5> <a [routerLink]="['/home']">Home</a> > {{service.serviceName}}</h5>
-</div>
-<div class="container_css">
-    <div class="detail">
-        <div class="title">
-            <img class="image" [src]="imgUrl">
-            <div class="header">
-              <h1>{{service.serviceName}}</h1>
-              <h4>{{service.category}}</h4>
-            </div>
-        </div>
-        <div class="body">
-            <div class="body_item" id="tabs">
-                <div class="tab_item" [class]='desc' (click)='openTabDesc()'>Description</div>
-                <div class="tab_item" [class]='spec' (click)='openTabSpec()'>Specification</div>
-                <div class="tab_item" [class]='review'  (click)='openTabRevire()'>Reviews</div>
-            </div>
-            <div *ngIf="desc =='active'" class="tab_content">{{service.description}}</div>
-            <div *ngIf="spec =='active'" class="tab_content">
-                <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th scope="col">Type</th>
-                        <th scope="col">Column heading</th>
-                        <th scope="col">Column heading</th>
-                        <th scope="col">Column heading</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="table-active">
-                        <th scope="row">Active</th>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">Default</th>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                      </tr>
-                      <tr class="table-active">
-                        <th scope="row">Primary</th>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                      </tr>
-                      <tr >
-                        <th scope="row">Secondary</th>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                      </tr>
-                      <tr class="table-active">
-                        <th scope="row">Success</th>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                      </tr>
-                      <tr >
-                        <th scope="row">Danger</th>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                      </tr>
-                      <tr class="table-active">
-                        <th scope="row">Warning</th>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                      </tr>
-                      <tr >
-                        <th scope="row">Info</th>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                      </tr>
-                      <tr class="table-active">
-                        <th scope="row">Light</th>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                      </tr>
-                      <tr >
-                        <th scope="row">Dark</th>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                        <td>Column content</td>
-                      </tr>
-                    </tbody>
-                  </table> 
-            </div>
-            <div *ngIf="review =='active'" class="tab_content">Reviews & Comments</div>
+<div class="container-fluid">
 
-            <div class="footer">
-              <div class="body_item" id="category"><h4>{{service.category}}</h4></div>
-              <div class="body_item" id="rating">
-                  <rating-star  TotalStar = '5' size = 'fa-lg' [value] = 'service.rating' color = 'gold'></rating-star>
+  <div class="row">
+    <div class="col-md-12 navLink">
+      <a [routerLink]="['/home']">Home</a><span>&nbsp; > &nbsp; {{service.serviceName}}</span>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-8 col-sm-12">
+
+      <div class="card">
+        <div class="row marL20">
+          <div class="col-md-2 marT30">
+            <img [src]="imgUrl" style="width: inherit;">
+          </div>
+          <div class="col-md-10 marT24">
+            <div class="marL24">
+              <div class="header"><h2>{{service.serviceName}}</h2></div> 
+              <!-- <div><span class="subTitle">Category</span></div> -->
+              <div><h5>{{service.category}}</h5></div>
+              <div class="marT24 marR30">
+                <span class="subTitle">Summary</span>
+                <div>{{service.description}}</div>
               </div>
             </div>
+          </div>
         </div>
+        <hr class="marT30">
+        <div class="row marL20">
+          <div class="col">
+            <div class="rating-star marB20">
+              <rating-star size='fa-lg' [value]="service.rating"></rating-star>
+              <span>&nbsp; (20)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marT30 card">
+        <div class="row">
+          <h5 class="tab" [class]='desc' (click)='openTabDesc()'>Description</h5>
+          <h5 class="tab" [class]='spec' (click)='openTabSpec()'>Specification</h5>
+          <h5 class="tab" [class]='review'  (click)='openTabRevire()'>Reviews</h5>
+        </div>
+        <hr class="border">
+        <div class="row marT20">
+          <div class="col marL30 marR30 marB30">
+            <div *ngIf="desc=='active'">{{service.description}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores iste corrupti, accusamus ipsam error perspiciatis fugiat ipsum incidunt eum ducimus neque similique assumenda sit minus veritatis eveniet corporis dolor, facere reiciendis! Rerum voluptatibus sequi excepturi nulla voluptate, illum officia deserunt, ab sint, adipisci in necessitatibus quibusdam natus sunt? Similique quo maiores labore hic repellendus ab delectus sequi tenetur consequuntur eaque animi voluptatum nihil, soluta deserunt quam minima dicta inventore vel autem quaerat, id quas accusamus recusandae? Laboriosam temporibus alias, animi obcaecati at eum earum natus beatae qui voluptatibus voluptatem sequi nihil harum eius minima molestias quia cupiditate nemo iste nostrum.</div>
+            <div *ngIf="spec=='active'">Specifications</div>
+            <div *ngIf="review=='active'">Review & Comments</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marT30 card">
+        <div class="row">
+          <div class="col marL30 marR30 marT30 marB30">
+            <div><h5>Comments (1)</h5></div>
+            <div class="marT30">
+              <input type="text" placeholder="Provide your comment">
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
+
+    <div class="col-md-4 col-sm-0">
+      <div class="card">
+        <div class="row marT30 marL20 marR20">
+          <h5> Service Related Videos</h5>
+        </div>
+        <div class="row marB30 marL20 marR20">
+            <video width="100%" height="250.5px" controls>
+              <source src="/build/videos/arcnet.io(7-sec).mp4" type=video/mp4>
+            </video>
+        </div>
+      </div>
+      <div class="marT30 card">
+        <div class="row">
+          <div class="col-md-12 marT30">
+            <h5 style="text-align: center;">Rate this Service</h5>
+            <rating-star class="marB30" size='fa-2x' value='0' color='#d3d3d3'></rating-star>
+          </div>
+        </div>
+      </div>
+
+      <div class="marT30 card">
+        <div class="row marT30">
+          <div class="col-md-12">
+            <h5>Enablement Presentation</h5>
+            <div class="marB30"><span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis, excepturi!</span></div>    
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </div>
