@@ -43,19 +43,24 @@
     font-size: 0.95em;
   }
   .footer{
-      display: grid;
-      grid-template-columns: 1fr 1.3fr;
+      display: flex;
+      // grid-template-columns: 1fr 1.3fr;
       // background-color: whitesmoke;
       height: 4em;
+      justify-content: space-evenly;
 
   }
   #footer{
     border-top: 1px solid grey;
   }
+  #addToCart{
+    color:#337ab7;
+  }
   #detail{
+    margin: 0px;
     width: fit-content;
-    margin: auto;
-    color: #337ab7;
+    align-self: center;
+    color:#337ab7;
     letter-spacing: 1px;
     font-family: sans-serif;
     :hover{
@@ -97,7 +102,7 @@ rating-star{
 }
 
 .card-header:hover{
-  background-color: #337ab7;
+  background-color:#337ab7;
   color: white;
   cursor: pointer;
 }
