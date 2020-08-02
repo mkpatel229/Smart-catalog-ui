@@ -15,10 +15,8 @@
         </div>
     </div>
     <div class="footer" id="footer">
-        <h5 class="item " id="detail" (click)="openDetail()"><strong>DETAILS</strong></h5>
-        <div class="footer">
-            <h5 id="rating">{{service.rating}}</h5>
-            <rating-star  TotalStar = '5' [value] = 'service.rating' color = 'gold' size=''></rating-star>
-        </div>       
+        <h5 id="detail" (click)="openDetail()"><strong>DETAILS</strong></h5>
+        <i class="fa fa-plus-square fa-2x" id="addToCart"></i>
+        <rating-star  TotalStar = '5' [value] = 'service.rating' color = 'gold' size=''></rating-star>     
     </div>  
 </div>
