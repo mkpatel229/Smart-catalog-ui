@@ -18,7 +18,7 @@ export class LoginViewComponent implements OnInit {
 
   onSubmit(){
     document.getElementById("navbar").style.display = ''
-    document.getElementById("view").style.paddingTop = '51px'
+    document.getElementById("view").style.paddingTop = '61px'
     this._router.navigate(['/home']);
   }
 
