@@ -6,4 +6,5 @@ export class Service {
     description:string;
     rating:number;
     specifications:any;
+    tags:[];
 }

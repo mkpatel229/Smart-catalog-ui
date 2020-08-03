@@ -12,6 +12,8 @@ export class HomeViewComponent implements OnInit {
 
   asc:boolean = false;
   errorMessage:string;
+  searchText:string = ""
+  NoResult = false;
 
   dropdownListProvider = [];
   selectedItemsProvider = [];
@@ -110,6 +112,24 @@ export class HomeViewComponent implements OnInit {
       this.serviceListCopy = this.serviceFilterProvider;
       this.serviceFilterCategory = this.serviceListCopy;
     }
+  }
+
+  search(text){
+
+    this.NoResult = false;
+
+    if(text.length != 0){
+        this.serviceListCopy = this.serviceList.filter(p => p.tags.some(t => {
+          if(t.toUpperCase() == text.toUpperCase()) return true;
+        }));
+        if(this.serviceListCopy.length == 0)
+          this.NoResult = true;
+          this.errorMessage = 'No result found for "' + this.searchText + '"';
+    }
+
+    else
+      this.serviceListCopy = this.serviceList;
+
   }
 
 }

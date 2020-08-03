@@ -29,10 +29,30 @@
         </div>       
     </div>
 
-    <div class="main">
-        <div class = "sorting">
+    <div class="main container-fluid">
+        <div class = "sorting row">
             <button *ngIf="!asc" (click)="sort()" class="fa fa-sort-amount-asc fa-lg"></button>
             <button *ngIf="asc" (click)="sort()" class="fa fa-sort-amount-desc fa-lg"></button>
+        </div>
+        <div class="row search">
+            <div class="input-group offset-md-3 col-md-6 marB30">
+                <input type="text" 
+                    class="form-control border-info" 
+                    placeholder="Search . . ." 
+                    [(ngModel)]="searchText" 
+                    name="searchText"
+                    (keydown.enter)="search($event.target.value)"
+                >
+                <div class="input-group-append">
+                  <button class="btn btn-info" type="submit" (click)="search(searchText)">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
+              </div>
+        </div>
+        <div *ngIf = "NoResult">
+            <h1 class="text-center">NO Results</h1>
+            <p class="text-center text-muted">{{errorMessage}}</p>
         </div>
         <div class="cards">
             <app-card class="item"
