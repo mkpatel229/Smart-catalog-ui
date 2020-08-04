@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CloudService } from './service/cloud.service';
 import { RatingModule } from 'ng-starrating';
 import { RatingStarComponent } from './rating-star/rating-star.component';
-
+import { UserformComponent } from './view/userform/userform.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,8 @@ import { RatingStarComponent } from './rating-star/rating-star.component';
     LoginViewComponent,
     CardComponent,
     ServiceDetailComponent,
-    RatingStarComponent
+    RatingStarComponent,
+    UserformComponent
   ],
   imports: [
     RatingModule,
