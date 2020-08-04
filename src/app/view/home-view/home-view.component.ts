@@ -117,10 +117,11 @@ export class HomeViewComponent implements OnInit {
   search(text){
 
     this.NoResult = false;
+    const regex = new RegExp(text,'i');
 
     if(text.length != 0){
         this.serviceListCopy = this.serviceList.filter(p => p.tags.some(t => {
-          if(t.toUpperCase() == text.toUpperCase()) return true;
+          if(regex.test(t)) return true;
         }));
         if(this.serviceListCopy.length == 0)
           this.NoResult = true;

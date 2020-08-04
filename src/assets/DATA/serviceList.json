@@ -33,7 +33,7 @@
       "providerName" : "Azure",
       "description" : "Azure Cosmos DB is a fully managed NoSQL database service for modern app development with guaranteed single-digit millisecond response times and 99.999-percent availability backed by SLAs, automatic and instant scalability, and open source APIs for MongoDB and Cassandra. Enjoy fast writes and reads anywhere in the world with turnkey multi-master global distribution.",
       "rating": 5.0,
-      "tags" : ["Azure Cosmos DB","Microsoft","Azure","Database"]
+      "tags" : ["Azure Cosmos DB","Microsoft","Azure","Database","db"]
     },
     {
       "id" : 5,
@@ -42,7 +42,7 @@
       "providerName" : "GCP",
       "description" : "Cloud Firestore is a fast, fully managed, serverless, cloud-native NoSQL document database that simplifies storing, syncing, and querying data for your mobile, web, and IoT",
       "rating": 4.5,
-      "tags" : ["GCP Firestore","Google","GCP","Database"]
+      "tags" : ["GCP Firestore","Google","GCP","Database","db"]
     },
     {
       "id" : 6,
@@ -51,7 +51,7 @@
       "providerName" : "AWS",
       "description" : "Amazon Redshift is a data warehouse product which forms part of the larger cloud-computing platform Amazon Web Services. The name means to shift away from Oracle, red being an allusion to Oracle, whose corporate color is red and is informally referred to as Big Red.",
       "rating": 3.0,
-      "tags" : ["Amazon Redshift","Amazon","AWS","Database"]
+      "tags" : ["Amazon Redshift","Amazon","AWS","Database","db"]
     },
     {
       "id" : 7,
@@ -60,7 +60,7 @@
       "providerName" : "GCP",
       "description" : "Cloud SQL automatically ensures your databases are reliable, secure, and scalable so that your business continues to run without disruption. Cloud SQL automates all your backups, replication, encryption patches, and capacity increases—while ensuring greater than 99.95% availability, anywhere in the world.",
       "rating": 3.5,
-      "tags" : ["GCP Cloud SQL","Google","GCP","Database"]
+      "tags" : ["GCP Cloud SQL","Google","GCP","Database","db"]
     },
     {
       "id" : 8,
@@ -78,7 +78,7 @@
       "providerName" : "AWS",
       "description" : "Amazon Aurora is a relational database service developed and offered by Amazon Web Services beginning in October 2014. Aurora is available as part of the Amazon Relational Database Service.",
       "rating": 3.5,
-      "tags" : ["Amazon Aurora","Amazon","AWS","Database"]
+      "tags" : ["Amazon Aurora","Amazon","AWS","Database","db"]
     },
     {
       "id" : 10,
@@ -87,7 +87,7 @@
       "providerName" : "Azure",
       "description" : "Microsoft Azure SQL Database is a managed cloud database provided as part of Microsoft Azure. A cloud database is a database that runs on a cloud computing platform, and access to it is provided as a service. Managed database services take care of scalability, backup, and high availability of the database. ",
       "rating": 4.5,
-      "tags" : ["Azure SQL Database","Microsoft","Azure","Database"]
+      "tags" : ["Azure SQL Database","Microsoft","Azure","Database","db"]
     },
     {
       "id" : 11,
