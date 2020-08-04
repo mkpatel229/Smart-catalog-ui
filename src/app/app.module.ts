@@ -17,7 +17,6 @@ import { RatingModule } from 'ng-starrating';
 import { RatingStarComponent } from './rating-star/rating-star.component';
 import { UserformComponent } from './view/userform/userform.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

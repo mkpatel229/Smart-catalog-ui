@@ -6,11 +6,13 @@ import { ServiceDetailComponent } from './view/service-detail/service-detail.com
 import { UserformComponent } from './view/userform/userform.component';
 
 
+
 const routes: Routes = [
   { path: 'home', component: HomeViewComponent },
   { path: 'login', component: LoginViewComponent },
-  { path: 'detail/:id', component: ServiceDetailComponent },
   { path: 'userform', component:UserformComponent },
+  { path: 'detail/:id', component: ServiceDetailComponent },
+  
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 

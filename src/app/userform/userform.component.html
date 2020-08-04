@@ -1,0 +1,114 @@
+<div class="wrapper">
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <form #myform="ngForm" (ngSubmit)="onSubmit(myform.value)">
+
+                <div class="form-group">
+                    <label for="projectname">Title *</label>
+                    <input #projectname="ngModel" ngModel name="projectname" required id="projectname" type="text"
+                        class="form-control">
+                    <div class="alert alert-danger" *ngIf="projectname.touched && projectname.invalid">
+                        <span>Project Name is required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="projectType">Project Type *</label>
+                    <input #projecttype="ngModel" ngModel name="projectType" required id="projectType" type="text"
+                        class="form-control">
+                    <div class="alert alert-danger" *ngIf="projecttype.touched && projecttype.invalid">
+                        <span>Project Type is required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="frontend">Front End *</label>
+                    <input #frontend="ngModel" ngModel name="frontend" id="frontend" type="text" class="form-control">
+                    <div class="alert alert-danger" *ngIf="frontend.touched && frontend.invalid">
+                        <span>frontend is required</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="backend">Back End *</label>
+                    <input #backend="ngModel" ngModel name="backend" id="backend" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="webserver">Web Server *</label>
+                    <input #webserver="ngModel" ngModel name="webserver" id="webserver" type="text"
+                        class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="database">Database *</label>
+                    <input #database="ngModel" ngModel name="database" id="database" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="caching">Caching Model *</label>
+                    <input #caching="ngModel" ngModel name="caching" id="caching" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>CloudProvider
+                        <br>
+                        <input #aws="ngModel" ngModel name="aws" type="checkbox">Aws
+                        <input #gcp="ngModel" ngModel name="gcp" type="checkbox">GCP
+                        <input #azure="ngModel" ngModel name="azure" type="checkbox">Azure
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="etc">Other Requirements *</label>
+                    <textarea #etc="ngModel" ngModel name="etc" id="etc" type="text" class="form-control"></textarea>
+                    <br />
+                    <input class="btn btn-primary" type="submit" value="Save">
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="card" style="width: 30rem;" *ngIf="projectname.value">
+                <h2>You Details !!</h2>
+                <div class="card-body">
+                    <img class="img-card"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSUxdTbfhIpD7h2Iu09VG4ZLfIAeIMsrcy0SQ&usqp=CAU">
+                    <br />
+                    <span *ngIf="projectname.value">
+                        Project Title - {{projectname.value}}
+                    </span>
+                    <br />
+                    <span *ngIf="projecttype.value">
+                        Project Type - {{projecttype.value}}
+                    </span>
+                    <br />
+                    <span *ngIf="frontend.value">
+                        Front End - {{frontend.value}}
+                    </span>
+                    <br />
+                    <span *ngIf="backend.value">
+                        Back End - {{backend.value}}
+                    </span>
+                    <br />
+                    <span *ngIf="webserver.value">
+                        Web Server - {{webserver.value}}
+                    </span>
+                    <br />
+                    <span *ngIf="database.value">
+                        Database - {{database.value}}
+                    </span>
+                    <br />
+                    <span *ngIf="caching.value">
+                        Caching Model - {{caching.value}}
+                    </span>
+                    <br />
+                    <span *ngIf="database.value">
+                        CloudProvider - {{database.value}}
+                    </span>
+                    <br />
+                    <div *ngIf="etc.value">
+                        Other Requirements - {{etc.value}}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
