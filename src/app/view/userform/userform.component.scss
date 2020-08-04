@@ -5,17 +5,36 @@
     padding-top: 3rem;
   }
 .card{
-    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 1px 4px #00000029;
 }
+
 .text{
     color: rgb(14, 13, 13);
 }
 .card-header{
     background-color:E8FOFE;
     text-align: justify;
-    color: black;
 }
 .list-group-item{
     background-color:white;
     color: black;
 }
+.card-header{
+    display: flex;
+    background-color: white;
+    border-bottom: 1px solid grey;
+    // height: 85px;
+  }
+.card-header:hover{
+    background-color:#337ab7;
+    color: white;
+    cursor: pointer;
+    .text{
+        color: white;
+    }
+}
+
+  label{
+      font-size: 15px;
+  }

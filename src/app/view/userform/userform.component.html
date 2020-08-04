@@ -1,14 +1,15 @@
 
-  <div class="container">
-    <div class="row">
-        <div class="col-md-6">
+  <div class="container-fluid">
+    <div class="row marT30"></div>
+    <div class="row marT30 marB30">
+        <div class="col-md-4 offset-md-2">
 
             <form #myform="ngForm" (ngSubmit)="onSubmit(myform.value)">
 
                 <div class="form-group">
                     <label for="projectname">Title *</label>
                     <input #projectname="ngModel" ngModel name="projectname" required id="projectname" type="text"
-                        class="form-control">
+                        class="form-control border-info">
                     <div class="alert alert-danger" *ngIf="projectname.touched && projectname.invalid">
                         <span>Project Name is required</span>
                     </div>
@@ -16,57 +17,57 @@
                 <div class="form-group">
                     <label for="projectType">Project Type *</label>
                     <input #projecttype="ngModel" ngModel name="projectType" required id="projectType" type="text"
-                        class="form-control">
+                        class="form-control border-info">
                     <div class="alert alert-danger" *ngIf="projecttype.touched && projecttype.invalid">
                         <span>Project Type is required</span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="frontend">Front End *</label>
-                    <input #frontend="ngModel" ngModel name="frontend" id="frontend" type="text" class="form-control">
+                    <input #frontend="ngModel" ngModel name="frontend" id="frontend" type="text" class="form-control border-info">
                     <div class="alert alert-danger" *ngIf="frontend.touched && frontend.invalid">
                         <span>frontend is required</span>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="backend">Back End *</label>
-                    <input #backend="ngModel" ngModel name="backend" id="backend" type="text" class="form-control">
+                    <input #backend="ngModel" ngModel name="backend" id="backend" type="text" class="form-control border-info">
                 </div>
                 <div class="form-group">
                     <label for="webserver">Web Server *</label>
                     <input #webserver="ngModel" ngModel name="webserver" id="webserver" type="text"
-                        class="form-control">
+                        class="form-control border-info">
                 </div>
                 <div class="form-group">
                     <label for="database">Database *</label>
-                    <input #database="ngModel" ngModel name="database" id="database" type="text" class="form-control">
+                    <input #database="ngModel" ngModel name="database" id="database" type="text" class="form-control border-info">
                 </div>
                 <div class="form-group">
                     <label for="caching">Caching Model *</label>
-                    <input #caching="ngModel" ngModel name="caching" id="caching" type="text" class="form-control">
+                    <input #caching="ngModel" ngModel name="caching" id="caching" type="text" class="form-control border-info">
                 </div>
                 <div class="form-group">
                     <label>CloudProvider
                         <br>
-                        <input #aws="ngModel" ngModel name="aws" type="checkbox">Aws
-                        <input #gcp="ngModel" ngModel name="gcp" type="checkbox">GCP
-                        <input #azure="ngModel" ngModel name="azure" type="checkbox">Azure
+                        <input #aws="ngModel" ngModel name="aws" type="checkbox" class="">Aws
+                        <input #gcp="ngModel" ngModel name="gcp" type="checkbox" class="marL20">GCP
+                        <input #azure="ngModel" ngModel name="azure" type="checkbox" class="marL20">Azure
                     </label>
                 </div>
                 <div class="form-group">
                     <label for="etc">Other Requirements *</label>
-                    <textarea #etc="ngModel" ngModel name="etc" id="etc" type="text" class="form-control"></textarea>
+                    <textarea #etc="ngModel" ngModel name="etc" id="etc" type="text" class="form-control border-info"></textarea>
                     <br />
-                    <input class="btn btn-primary" type="submit" value="Save">
+                    <input class="btn btn-info" type="submit" value="Submit">
                 </div>
             </form>
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-4 offset-md-1">
             
             <div class="card"  *ngIf="projectname.value">
                 <div class="card-header">
-                  <h4 class="text">Details Entered</h4>
+                  <h4 class="text align-self-center">Details Entered</h4>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
