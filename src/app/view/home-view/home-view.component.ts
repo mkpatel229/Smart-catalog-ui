@@ -121,7 +121,7 @@ export class HomeViewComponent implements OnInit {
 
     if(text.length != 0){
         this.serviceListCopy = this.serviceList.filter(p => p.tags.some(t => {
-          if(regex.test(t)) return true;
+          if(regex.test(t) && p.isApproved) return true;
         }));
         if(this.serviceListCopy.length == 0)
           this.NoResult = true;

@@ -17,7 +17,11 @@
           </div>
           <div class="col-md-10 marT24">
             <div class="marL24">
-              <div class="header"><h2>{{service.serviceName}}</h2></div> 
+              <div class="header d-flex justify-content-between">
+                <h2>{{service.serviceName}}</h2>
+                <i *ngIf = "service.isApproved" class="fas fa-3x fa-check-circle text-success marR30"></i>
+                <i *ngIf = "!service.isApproved" class="fas fa-3x fa-check-circle text-muted marR30"></i>
+              </div> 
               <!-- <div><span class="subTitle">Category</span></div> -->
               <div><h5>{{service.category}}</h5></div>
               <div class="marT24 marR30">

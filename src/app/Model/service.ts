@@ -7,4 +7,5 @@ export class Service {
     rating:number;
     specifications:any;
     tags:[];
+    isApproved:boolean;
 }
