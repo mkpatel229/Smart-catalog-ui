@@ -6,7 +6,11 @@
     </div>
     <div class="card-body">
         <div class="item">
-            <h6 class="card-subtitle text-muted">Category</h6>
+            <div class="d-flex justify-content-between">
+                <h6 class="card-subtitle text-muted">Category</h6>
+                <i *ngIf = "service.isApproved" class="card-subtitle fa fa-lg fa-check-circle text-success"></i>
+                <i *ngIf = "!service.isApproved" class="card-subtitle fa fa-lg fa-check-circle text-muted"></i>
+            </div>
             <h5 class="card-title">{{service.category}}</h5>
         </div>
         <div class="item">
