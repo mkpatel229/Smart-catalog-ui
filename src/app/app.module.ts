@@ -16,6 +16,7 @@ import { CloudService } from './service/cloud.service';
 import { RatingModule } from 'ng-starrating';
 import { RatingStarComponent } from './rating-star/rating-star.component';
 import { UserformComponent } from './view/userform/userform.component';
+import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { UserformComponent } from './view/userform/userform.component';
     UserformComponent
   ],
   imports: [
+    AutocompleteLibModule,
     RatingModule,
     HttpClientModule,
     FormsModule,

@@ -16,8 +16,29 @@
                 </div>
                 <div class="form-group">
                     <label for="projectType">Project Type *</label>
-                    <input #projecttype="ngModel" ngModel name="projectType" required id="projectType" type="text"
-                        class="form-control border-info">
+                    <!-- <input #projecttype="ngModel" ngModel name="projectType" required id="projectType" type="text"
+                        class="form-control border-info"> -->
+                    <div class="autocomplete border-info">
+                        <ng-autocomplete 
+                            [data]="data"
+                            [searchKeyword]="keyword"
+                            (selected)='selectEvent($event)'
+                            (inputChanged)='onChangeSearch($event)'
+                            (inputFocused)='onFocused($event)'
+                            [itemTemplate]="itemTemplate"
+                            [notFoundTemplate]="notFoundTemplate"
+                            #projecttype="ngModel" ngModel name="projectType"
+                            >                                 
+                        </ng-autocomplete>
+                            
+                        <ng-template #itemTemplate let-item>
+                        <a [innerHTML]="item.name"></a>
+                        </ng-template>
+                            
+                        <ng-template #notFoundTemplate let-notFound>
+                        <div [innerHTML]="notFound"></div>
+                        </ng-template>
+                    </div>
                     <div class="alert alert-danger" *ngIf="projecttype.touched && projecttype.invalid">
                         <span>Project Type is required</span>
                     </div>
@@ -77,7 +98,7 @@
                     </li>
                     <li class="list-group-item">
                         <span *ngIf="projecttype.value">
-                            Project Type - {{projecttype.value}}
+                            Project Type - {{projecttype.viewModel.name}}
                         </span>
                     </li>
                     <li class="list-group-item">
