@@ -14,6 +14,18 @@ export class HomeViewComponent implements OnInit {
   errorMessage:string;
   searchText:string = ""
   NoResult = false;
+  keyword = 'name';
+
+  data = [
+     {
+       id: 1,
+       name: 'Usa'
+     },
+     {
+       id: 2,
+       name: 'England'
+     }
+  ];
 
   dropdownListProvider = [];
   selectedItemsProvider = [];
@@ -131,6 +143,19 @@ export class HomeViewComponent implements OnInit {
     else
       this.serviceListCopy = this.serviceList;
 
+  }
+
+  selectEvent(item) {
+    // do something with selected item
+  }
+ 
+  onChangeSearch(val: string) {
+    // fetch remote data from here
+    // And reassign the 'data' which is binded to 'data' property.
+  }
+  
+  onFocused(e){
+    // do something when input is focused
   }
 
 }
