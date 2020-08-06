@@ -17,6 +17,7 @@ import { RatingModule } from 'ng-starrating';
 import { RatingStarComponent } from './rating-star/rating-star.component';
 import { UserformComponent } from './view/userform/userform.component';
 import {AutocompleteLibModule} from 'angular-ng-autocomplete';
+import { ServiceListViewComponent } from './view/service-list-view/service-list-view.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {AutocompleteLibModule} from 'angular-ng-autocomplete';
     CardComponent,
     ServiceDetailComponent,
     RatingStarComponent,
-    UserformComponent
+    UserformComponent,
+    ServiceListViewComponent
   ],
   imports: [
     AutocompleteLibModule,
