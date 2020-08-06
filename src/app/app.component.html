@@ -8,23 +8,29 @@
           <a class="nav-link" [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">AWS</a>
+          <a class="nav-link" >AWS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">GCP</a>
+          <a class="nav-link" >GCP</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Azure</a>
+          <a class="nav-link" >Azure</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/userform']">UserForm</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-lg fa-bars"></i></a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" [routerLink]="['/serviceList']">All Cloud Services List</a>
+            <a class="dropdown-item" href="#">Top Recommended Architecture</a>
+            <a class="dropdown-item" href="#">Approved Service Architecture</a>
+            <a class="dropdown-item" [routerLink]="['/userform']">Crete Custom Architecture</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" [routerLink]="['/home']">Home</a>
+            <a class="dropdown-item" [routerLink]="['/home']">About Us</a>
+            <a class="dropdown-item" [routerLink]="['/home']">Contact Us</a>
+          </div>
         </li>
       </ul>
-      <!-- <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form> -->
-      <button type="button" class="btn btn-secondary my-2 my-sm-0" [routerLink]="['/login']" id="login">Logout</button>
+      <button type="button" class="btn" [routerLink]="['/login']" id="login"> <i class="fas fa-2x fa-sign-out-alt"></i></button>
     </div>
   </nav>
 

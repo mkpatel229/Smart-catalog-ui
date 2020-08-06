@@ -1,115 +1,125 @@
 
-.grid{
-    display: grid;
-    grid-template-columns: minmax(250px, 1fr) 6fr;
-    min-height: 100vh;
-    // grid-template-columns: 1fr 7fr;
-}
+// .grid{
+//     display: grid;
+//     grid-template-columns: minmax(250px, 1fr) 6fr;
+//     min-height: 100vh;
+//     // grid-template-columns: 1fr 7fr;
+// }
 
+// .sidebar{
+//     // grid-area: sidebar;
+//     display: flex;
+//     flex-direction: column;
+//     font-family: 'Ubuntu', sans-serif;
+//     color: black;
+//     padding-top: 76px;
+//     background-color: rgb(238, 238, 238);
+//     box-shadow: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
+    
+// }
+// #title{
+//     font-size: 1.1em;
+//     top: 105px;
+//     width: 16.25em;
+//     position: fixed;
+//     h4{
+//         margin: 18px;
+//     }
+// }
+// .sorting{
+//     display: flex;
+//     flex-direction: row;
+//     margin: 0px;
+//     padding: 10px;
+//     padding-right: 15px;
+//     justify-content: flex-end;
+//     button{
+//         padding: 0px;
+//         margin: 0px 28px;
+//         height: 1.2em;
+//         width: 2em;
+//     }
+//     button:hover{
+//         cursor: pointer;
+//     }
+// }
+// .fillter{
+//     margin: 0px;
+//     height: 65vh;
+//     position: fixed;
+//     width: 20em;
+//     top: 147px;
+//     font-size: 0.9em;
+//     display: flex;
+//     flex-direction: column;
+//     overflow: overlay;
+//     form{
+//         height: inherit;
+//     }
+//     .dropdown{
+//         display: flex;
+//         flex-direction: column;
+//         margin: 20px 10px;
+//         width: 90%;
+//         .item{
+//             margin: 10px;
+//         }
+//         select{
+//             font-size: 20px;
+//             text-align-last: center;
+//         }
+
+//     }
+// }
+
+// .main{
+//     // grid-area: main;
+//     font-family: 'Ubuntu', sans-serif;
+//     .cards{
+//         display: grid;
+//         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+//         gap: 1.5em;
+//         padding: 3em;
+//         padding-top: 0px;
+//     }
+// }
+
+// ::ng-deep .multiselect-dropdown{
+//     background-color: white;
+//     color: black;
+//     font-size: large;
+//     position: static !important;
+
+//     .selected-item{
+//         height: 30px !important;
+//         font-size: small !important;
+//     }
+//     .dropdown-down{
+//         border-top: 8px solid #adadad !important;
+//         border-left: 6px solid transparent !important;
+//         border-right: 6px solid transparent !important;
+//     }
+//     .dropdown-btn{
+//         background-color: white !important;
+//         border: 1px solid #000000 !important;
+//         border-radius: 0px !important;
+//     }
+//     .dropdown-list{
+//         position: static !important;
+//     }
+//   }
+
+//   .autocomplete {
+//     width: 220px;
+//     border: 1px solid;
+// }
+.container-fluid{
+    padding: 0px;
+    margin: 0px;
+}
 .sidebar{
-    // grid-area: sidebar;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Ubuntu', sans-serif;
-    color: black;
-    padding-top: 76px;
+    min-height: 100vh;
+    // border: solid;
     background-color: rgb(238, 238, 238);
     box-shadow: 0 3px 3px -2px rgba(0,0,0,.2), 0 3px 4px 0 rgba(0,0,0,.14), 0 1px 8px 0 rgba(0,0,0,.12);
-    
-}
-#title{
-    font-size: 1.1em;
-    top: 105px;
-    width: 16.25em;
-    position: fixed;
-    h4{
-        margin: 18px;
-    }
-}
-.sorting{
-    display: flex;
-    flex-direction: row;
-    margin: 0px;
-    padding: 10px;
-    padding-right: 15px;
-    justify-content: flex-end;
-    button{
-        padding: 0px;
-        margin: 0px 28px;
-        height: 1.2em;
-        width: 2em;
-    }
-    button:hover{
-        cursor: pointer;
-    }
-}
-.fillter{
-    margin: 0px;
-    height: 65vh;
-    position: fixed;
-    width: 20em;
-    top: 147px;
-    font-size: 0.9em;
-    display: flex;
-    flex-direction: column;
-    overflow: overlay;
-    form{
-        height: inherit;
-    }
-    .dropdown{
-        display: flex;
-        flex-direction: column;
-        margin: 20px 10px;
-        width: 90%;
-        .item{
-            margin: 10px;
-        }
-        select{
-            font-size: 20px;
-            text-align-last: center;
-        }
-
-    }
-}
-
-.main{
-    // grid-area: main;
-    font-family: 'Ubuntu', sans-serif;
-    .cards{
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 1.5em;
-        padding: 3em;
-        padding-top: 0px;
-    }
-}
-
-::ng-deep .multiselect-dropdown{
-    background-color: white;
-    color: black;
-    font-size: large;
-    position: static !important;
-
-    .selected-item{
-        height: 30px !important;
-        font-size: small !important;
-    }
-    .dropdown-down{
-        border-top: 8px solid #adadad !important;
-        border-left: 6px solid transparent !important;
-        border-right: 6px solid transparent !important;
-    }
-    .dropdown-btn{
-        background-color: white !important;
-        border: 1px solid #000000 !important;
-        border-radius: 0px !important;
-    }
-    .dropdown-list{
-        position: static !important;
-    }
-  }
-
-  .autocomplete {
-    width: 220px;
-    border: 1px solid;
 }
