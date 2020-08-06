@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import {Service} from '../../Model/service'
 import {CloudService} from '../../service/cloud.service'
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -39,7 +40,11 @@ export class ServiceListViewComponent implements OnInit {
   serviceFilterProvider: Service[];
   serviceFilterCategory: Service[];
 
-  constructor(private cloudService:CloudService) { 
+  constructor(private cloudService:CloudService, private router:Router) { 
+    this.router.events.subscribe((path) => {
+      window.scrollTo(0, 0);
+    });
+
     this.cloudService.getServices().subscribe(service => {
       this.cloudService.service = service;
       this.serviceList=this.cloudService.service;

@@ -12,11 +12,11 @@ export class UserformComponent implements OnInit {
   data = [
      {
        id: 1,
-       name: 'Usa'
+       name: '3-Tier Application'
      },
      {
        id: 2,
-       name: 'England'
+       name: '2-Tier Application'
      }
   ];
 
