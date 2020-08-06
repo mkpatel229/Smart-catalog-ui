@@ -2,11 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import {Service} from '../../../Model/service'
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  selector: 'Home-card',
+  templateUrl: './home-card.component.html',
+  styleUrls: ['./home-card.component.scss']
 })
-export class CardComponent implements OnInit {
+export class HomeCardComponent implements OnInit {
 
   @Input() service: Service;
   rating:number;
@@ -15,7 +15,7 @@ export class CardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.imgUrl = this.imgUrl + this.service.providerName + ".jpg";
+    //this.imgUrl = this.imgUrl + this.service.providerName + ".jpg";
   }
 
   getStars(){

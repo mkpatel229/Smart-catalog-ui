@@ -9,7 +9,8 @@ import { HomeViewComponent } from './view/home-view/home-view.component';
 import { LoginViewComponent } from './view/login-view/login-view.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { FormsModule } from '@angular/forms';
-import { CardComponent } from './view/home-view/card/card.component';
+import { CardComponent } from './view/service-list-view/card/card.component';
+import { HomeCardComponent } from './view/home-view/card/home-card.component';
 import { ServiceDetailComponent } from './view/service-detail/service-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CloudService } from './service/cloud.service';
@@ -18,9 +19,11 @@ import { RatingStarComponent } from './rating-star/rating-star.component';
 import { UserformComponent } from './view/userform/userform.component';
 import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 import { ServiceListViewComponent } from './view/service-list-view/service-list-view.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
+    HomeCardComponent,
     AppComponent,
     HomeViewComponent,
     LoginViewComponent,
@@ -31,6 +34,7 @@ import { ServiceListViewComponent } from './view/service-list-view/service-list-
     ServiceListViewComponent
   ],
   imports: [
+    RouterModule,
     AutocompleteLibModule,
     RatingModule,
     HttpClientModule,

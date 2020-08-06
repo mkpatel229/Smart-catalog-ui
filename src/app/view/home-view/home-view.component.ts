@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import {Service} from '../../Model/service'
 import {CloudService} from '../../service/cloud.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-view',
@@ -13,7 +14,11 @@ export class HomeViewComponent implements OnInit {
   searchText:string = ""
 
 
-  constructor(private cloudService:CloudService) {  }
+  constructor(private cloudService:CloudService, private router:Router) { 
+      this.router.events.subscribe((path) => {
+        window.scrollTo(0, 0);
+    });
+   }
 
   ngOnInit(): void {  }
 
