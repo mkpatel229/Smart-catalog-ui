@@ -20,6 +20,7 @@ import { UserformComponent } from './view/userform/userform.component';
 import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 import { ServiceListViewComponent } from './view/service-list-view/service-list-view.component';
 import { RouterModule } from '@angular/router';
+import { ToolbarComponent } from './view/toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { RouterModule } from '@angular/router';
     ServiceDetailComponent,
     RatingStarComponent,
     UserformComponent,
-    ServiceListViewComponent
+    ServiceListViewComponent,
+    ToolbarComponent
   ],
   imports: [
     RouterModule,
