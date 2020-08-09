@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Service} from '../../../Model/service'
+import { Templates } from '../../../Model/templates.model';
 
 @Component({
   selector: 'Home-card',
@@ -8,25 +9,20 @@ import {Service} from '../../../Model/service'
 })
 export class HomeCardComponent implements OnInit {
 
-  @Input() service: Service;
+  @Input('service') service: Service;
+  @Input('template') template: Templates;
   rating:number;
   imgUrl:string = "../../../../assets/";
 
   constructor() { }
 
   ngOnInit(): void {
-    //this.imgUrl = this.imgUrl + this.service.providerName + ".jpg";
-  }
-
-  getStars(){
-    this.rating = this.service.rating/5*100;
-    return this.rating + '%';
-
+    this.imgUrl = this.imgUrl + this.service?.providerName + ".jpg";
   }
 
   openDetail()  
   {  
-    var url = '/detail/'+ this.service.id; 
+    var url = '/service/detail/'+ this.service.id; 
      window.open(url);  
   }
 
