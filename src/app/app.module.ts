@@ -20,6 +20,7 @@ import { UserformComponent } from './view/userform/userform.component';
 import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 import { ServiceListViewComponent } from './view/service-list-view/service-list-view.component';
 import { RouterModule } from '@angular/router';
+import { ToolbarComponent } from './view/toolbar/toolbar.component';
 import { RecommendedTemplatesComponent } from './view/recommended-templates/recommended-templates.component';
 
 @NgModule({
@@ -33,6 +34,7 @@ import { RecommendedTemplatesComponent } from './view/recommended-templates/reco
     RatingStarComponent,
     UserformComponent,
     ServiceListViewComponent,
+    ToolbarComponent
     RecommendedTemplatesComponent
   ],
   imports: [

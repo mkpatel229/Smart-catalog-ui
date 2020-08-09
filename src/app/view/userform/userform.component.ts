@@ -9,16 +9,30 @@ export class UserformComponent implements OnInit {
 
   keyword = 'name';
   selectedType = [];
-  data = [
+  platforms = [
      {
        id: 1,
-       name: '3-Tier Application'
+       name: 'Iaas'
      },
      {
        id: 2,
-       name: '2-Tier Application'
-     }
+       name: 'Paas'
+     },{
+      id: 3,
+      name: 'Saas'
+    }
   ];
+  databaseTypes = [
+    {
+      id: 1,
+      name: 'Sql'
+    },
+    {
+      id: 2,
+      name: 'No-Sql'
+    }
+
+ ];
 
   constructor() { }
 
