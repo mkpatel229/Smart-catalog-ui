@@ -21,6 +21,7 @@ import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 import { ServiceListViewComponent } from './view/service-list-view/service-list-view.component';
 import { RouterModule } from '@angular/router';
 import { ToolbarComponent } from './view/toolbar/toolbar.component';
+import { RecommendedTemplatesComponent } from './view/recommended-templates/recommended-templates.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ToolbarComponent } from './view/toolbar/toolbar.component';
     UserformComponent,
     ServiceListViewComponent,
     ToolbarComponent
+    RecommendedTemplatesComponent
   ],
   imports: [
     RouterModule,

@@ -3,6 +3,7 @@ import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import {Service} from '../../Model/service'
 import {CloudService} from '../../service/cloud.service'
 import { Router } from '@angular/router';
+import { Templates } from 'src/app/Model/templates.model';
 
 @Component({
   selector: 'app-home-view',
@@ -11,34 +12,32 @@ import { Router } from '@angular/router';
 })
 export class HomeViewComponent implements OnInit {
 
-  searchText:string = ""
-
+  errorMessage:string;
+  serviceList: Service[];
+  templateList: Templates[];
+  ApprovedTemplateList: Templates[];
+  RecoTemplateList: Templates[];
 
   constructor(private cloudService:CloudService, private router:Router) { 
       this.router.events.subscribe((path) => {
         window.scrollTo(0, 0);
     });
+    
    }
 
-  ngOnInit(): void {  }
+  ngOnInit(): void { 
 
-  search(text){
+    this.cloudService.getServices().subscribe(service => {
+      this.cloudService.service = service;
+      this.serviceList=this.cloudService.service;
+    } ,error => this.errorMessage = <any>error);
 
-    // this.NoResult = false;
-    // const regex = new RegExp(text,'i');
+    this.cloudService.getTemplates().subscribe(template => {
+      this.templateList = template;
+      this.ApprovedTemplateList = template.filter(s => s.isApproved==true);
+      this.RecoTemplateList = template.sort((s1,s2) => {return s1.rating>s2.rating?-1:1});
+    },error => this.errorMessage = <any>error);
 
-    // if(text.length != 0){
-    //     this.serviceListCopy = this.serviceList.filter(p => p.tags.some(t => {
-    //       if(regex.test(t) && p.isApproved) return true;
-    //     }));
-    //     if(this.serviceListCopy.length == 0)
-    //       this.NoResult = true;
-    //       this.errorMessage = 'No result found for "' + this.searchText + '"';
-    // }
-
-    // else
-    //   this.serviceListCopy = this.serviceList;
-
-  }
+   }
 
 }
