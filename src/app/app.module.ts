@@ -34,7 +34,7 @@ import { RecommendedTemplatesComponent } from './view/recommended-templates/reco
     RatingStarComponent,
     UserformComponent,
     ServiceListViewComponent,
-    ToolbarComponent
+    ToolbarComponent,
     RecommendedTemplatesComponent
   ],
   imports: [
