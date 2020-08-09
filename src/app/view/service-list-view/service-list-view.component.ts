@@ -79,11 +79,11 @@ export class ServiceListViewComponent implements OnInit {
     ];
     this.selectedItemsCategory = []; 
 
-    console.log(this.dropdownListProvider)
+    //console.log(this.dropdownListProvider)
   }
 
   sort(){
-    console.log(this.asc)
+    //console.log(this.asc)
     if(this.asc){
       this.serviceListCopy.sort((one,two)=>{return one.rating>two.rating?-1:1});
       this.asc = !this.asc;

@@ -2,7 +2,11 @@
 
   <div class="row">
     <div class="col-md-12 navLink">
-      <a [routerLink]="['/home']">Home</a><span>&nbsp; > &nbsp; {{service.serviceName}}</span>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
+        <li class="breadcrumb-item"><a [routerLink]="['/serviceList']">Service List</a></li>
+        <li class="breadcrumb-item">{{service.serviceName}}</li>
+      </ol>
     </div>
   </div>
 
@@ -19,8 +23,8 @@
             <div class="marL24">
               <div class="header d-flex justify-content-between">
                 <h2>{{service.serviceName}}</h2>
-                <i *ngIf = "service.isApproved" class="fas fa-3x fa-check-circle text-success marR30"></i>
-                <i *ngIf = "!service.isApproved" class="fas fa-3x fa-check-circle text-muted marR30"></i>
+                <img *ngIf = "service.isApproved" class="approve marR30" src="../../../assets/shield_approval.svg">
+                <img *ngIf = "!service.isApproved" class="approve marR30" src="../../../assets/shield_notapproval.svg">
               </div> 
               <!-- <div><span class="subTitle">Category</span></div> -->
               <div><h5>{{service.category}}</h5></div>

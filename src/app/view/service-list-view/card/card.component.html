@@ -1,6 +1,5 @@
-<div class="card1 card" [class]="service.category">
+<div class="card1 card">
     <div class="item card-header" id="title" (click)="openDetail()">
-        <!-- <h3 class="item sub">{{service.providerName}}</h3> -->
         <h4 class="item main ">{{service.serviceName}}</h4>
         <img id="title_image" [src]="imgUrl">
     </div>
@@ -8,8 +7,8 @@
         <div class="item">
             <div class="d-flex justify-content-between">
                 <h6 class="card-subtitle text-muted">Category</h6>
-                <i *ngIf = "service.isApproved" class="card-subtitle fa fa-lg fa-check-circle text-success"></i>
-                <i *ngIf = "!service.isApproved" class="card-subtitle fa fa-lg fa-check-circle text-muted"></i>
+                <img *ngIf = "service.isApproved" class="approve " src="../../../assets/shield_approval.svg">
+                <img *ngIf = "!service.isApproved" class="approve " src="../../../assets/shield_notapproval.svg">
             </div>
             <h5 class="card-title">{{service.category}}</h5>
         </div>

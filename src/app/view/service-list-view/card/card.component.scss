@@ -45,7 +45,7 @@
   .footer{
       display: flex;
       // grid-template-columns: 1fr 1.3fr;
-      // background-color: whitesmoke;
+      // background-color: #e8ebf3;
       height: 4em;
       justify-content: space-evenly;
 
@@ -111,4 +111,11 @@ rating-star{
   background-color: white;
   border-bottom: 1px solid grey;
   height: 85px;
+  padding: 1.25em !important;
+}
+
+.approve{
+  width: 18px;
+  // height: 22px;
+  opacity: 1;
 }

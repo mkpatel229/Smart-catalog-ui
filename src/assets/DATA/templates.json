@@ -1,0 +1,92 @@
+[
+  {
+    "templateId" : 1,
+    "name" : "AWS EC2 + Sql 2",
+    "category" : "3-Tier",
+    "rating" : 2.0,
+    "isApproved" : true,
+    "decription" : "Good with (Angular/React/Vue) + (Spring boot/.Net)",
+    "serviceList" : [
+      {
+        "id" : 1,
+        "serviceName" : "Amazon EC2",
+        "category" : "Compute",
+        "providerName" : "AWS",
+        "description" : "Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. Amazon EC2’s simple web service interface allows you to obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon’s proven computing environment.",
+        "rating": 4.0,
+        "tags" : ["Amazon EC2","Amazon","AWS","Compute"],
+        "isApproved" : true
+      },
+      {
+        "id" : 10,
+        "serviceName" : "Azure SQL Database",
+        "category" : "Database",
+        "providerName" : "Azure",
+        "description" : "Microsoft Azure SQL Database is a managed cloud database provided as part of Microsoft Azure. A cloud database is a database that runs on a cloud computing platform, and access to it is provided as a service. Managed database services take care of scalability, backup, and high availability of the database. ",
+        "rating": 4.5,
+        "tags" : ["Azure SQL Database","Microsoft","Azure","Database","db"],
+        "isApproved" : true
+      }
+    ]
+  },
+  {
+    "templateId" : 2,
+    "name" : "AWS EC2 + Sql 5",
+    "category" : "3-Tier",
+    "rating" : 5.0,
+    "isApproved" : true,
+    "decription" : "Good with (Angular/React/Vue) + (Spring boot/.Net)",
+    "serviceList" : [
+      {
+        "id" : 1,
+        "serviceName" : "Amazon EC2",
+        "category" : "Compute",
+        "providerName" : "AWS",
+        "description" : "Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. Amazon EC2’s simple web service interface allows you to obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon’s proven computing environment.",
+        "rating": 4.0,
+        "tags" : ["Amazon EC2","Amazon","AWS","Compute"],
+        "isApproved" : true
+      },
+      {
+        "id" : 10,
+        "serviceName" : "Azure SQL Database",
+        "category" : "Database",
+        "providerName" : "Azure",
+        "description" : "Microsoft Azure SQL Database is a managed cloud database provided as part of Microsoft Azure. A cloud database is a database that runs on a cloud computing platform, and access to it is provided as a service. Managed database services take care of scalability, backup, and high availability of the database. ",
+        "rating": 4.5,
+        "tags" : ["Azure SQL Database","Microsoft","Azure","Database","db"],
+        "isApproved" : true
+      }
+    ]
+  },
+  {
+    "templateId" : 3,
+    "name" : "AWS EC2 + Sql 3",
+    "category" : "3-Tier",
+    "rating" : 3.0,
+    "isApproved" : true,
+    "decription" : "Good with (Angular/React/Vue) + (Spring boot/.Net)",
+    "serviceList" : [
+      {
+        "id" : 1,
+        "serviceName" : "Amazon EC2",
+        "category" : "Compute",
+        "providerName" : "AWS",
+        "description" : "Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. Amazon EC2’s simple web service interface allows you to obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon’s proven computing environment.",
+        "rating": 4.0,
+        "tags" : ["Amazon EC2","Amazon","AWS","Compute"],
+        "isApproved" : true
+      },
+      {
+        "id" : 10,
+        "serviceName" : "Azure SQL Database",
+        "category" : "Database",
+        "providerName" : "Azure",
+        "description" : "Microsoft Azure SQL Database is a managed cloud database provided as part of Microsoft Azure. A cloud database is a database that runs on a cloud computing platform, and access to it is provided as a service. Managed database services take care of scalability, backup, and high availability of the database. ",
+        "rating": 4.5,
+        "tags" : ["Azure SQL Database","Microsoft","Azure","Database","db"],
+        "isApproved" : true
+      }
+    ]
+  }
+]
