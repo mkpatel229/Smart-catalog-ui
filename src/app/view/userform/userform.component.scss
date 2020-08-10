@@ -1,8 +1,18 @@
-.container {
+.header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+}
+
+  .container {
     display: grid;
     grid-gap: 10px;
-    padding-left: 07rem;
-    padding-top: 3rem;
+
   }
 .card{
     background-color: #b2cfe7;
@@ -20,9 +30,7 @@
     background-color:white;
     color: black;
 }
-input[type=text] {
-    
-  }
+
 .card-header{
     display: flex;
     background-color: white;
@@ -41,5 +49,19 @@ input[type=text] {
   label{
       font-size: 15px;
   }
+  .header {
+    color: black;
+    overflow: hidden;
+    text-align: left;
+    margin-left: 60px;
+    
+  }
+.check{
+    display: inline-block;
+    padding: 10px;
+}
+.grid-container{
+    background-color:powderblue;
+}
 
 

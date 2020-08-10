@@ -14,11 +14,11 @@
         </div>
         <div class="item">
             <!-- <h6 class="card-subtitle text-muted">Summary</h6> -->
-            <p class="desc card-text">Get on-demand, highly scalable and protected virtualised infrastructure, Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, iusto.</p>
+            <p class="desc card-text">{{service.description}}</p>
         </div>
     </div>
     <div class="footer" id="footer">
-        <h5 id="detail" (click)="openDetail()"><strong>DETAILS</strong></h5>
+        <h5 id="detail" (click)="openDetail()"><strong>Details</strong></h5>
         <i class="fa fa-plus-square fa-2x" id="addToCart"></i>
         <rating-star  TotalStar = '5' [value] = 'service.rating' color = 'gold' size=''></rating-star>     
     </div>  

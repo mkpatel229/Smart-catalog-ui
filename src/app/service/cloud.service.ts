@@ -12,14 +12,17 @@ import { Templates } from '../Model/templates.model';
 export class CloudService {
 
   service: any = [];
+  private baseUrl="http://localhost:8080/all";
 
   constructor(private http: HttpClient) { }
 
   serviceList:Service[];
   templateList:Templates[];
 
-  getServices(): Observable<Service[]>{
-    return this.http.get<Service[]>('../assets/DATA/serviceList.json').pipe(
+  getServices(): Observable<Service[]>
+  {
+    //../assets/DATA/serviceList.json'
+    return this.http.get<Service[]>(this.baseUrl).pipe(
       catchError(this.handleError));
   }
 
