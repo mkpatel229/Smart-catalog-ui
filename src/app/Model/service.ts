@@ -1,3 +1,5 @@
+import { Templates } from './templates.model';
+
 export class Service {
     id:number;
     serviceName:String;
@@ -8,4 +10,5 @@ export class Service {
     specifications:any;
     tags:[];
     isApproved:boolean;
+    templates:Templates[];
 }

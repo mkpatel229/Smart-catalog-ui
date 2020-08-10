@@ -20,8 +20,10 @@
           <a class="nav-link " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-lg fa-bars"></i></a>
           <div class="dropdown-menu">
             <a class="dropdown-item" [routerLink]="['/serviceList']">All Cloud Services List</a>
-            <a class="dropdown-item" [routerLink]="['/templates']" [state]="{ data: 'recommended'}">Top Recommended Architecture</a>
-            <a class="dropdown-item" [routerLink]="['/templates']" [state]="{ data: 'approved'}">Approved Service Architecture</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" [routerLink]="['/templates']">All Templates</a>
+            <a class="dropdown-item" [routerLink]="['/TopTemplates']" [state]="{ data: 'recommended'}">Top Recommended Templates</a>
+            <a class="dropdown-item" [routerLink]="['/ApprovedTemplates']" [state]="{ data: 'approved'}">Approved Service Templates</a>
             <a class="dropdown-item" [routerLink]="['/userform']">Create Custom Architecture</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" [routerLink]="['/home']">Home</a>
