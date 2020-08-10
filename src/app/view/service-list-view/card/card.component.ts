@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {Service} from '../../../Model/service'
 
 @Component({
-  selector: 'app-card',
+  selector: 'service-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })

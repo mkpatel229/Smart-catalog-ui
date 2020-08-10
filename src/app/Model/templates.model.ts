@@ -6,6 +6,7 @@ export class Templates {
     category: String;
     rating: number;
     isApproved: boolean;
-    decription: string;
+    description: string;
     serviceList: Service[];
+    tags:[];
 }

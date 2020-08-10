@@ -5,7 +5,8 @@ import { ServiceListViewComponent } from './view/service-list-view/service-list-
 import { LoginViewComponent } from './view/login-view/login-view.component';
 import { ServiceDetailComponent } from './view/service-detail/service-detail.component';
 import { UserformComponent } from './view/userform/userform.component';
-import { RecommendedTemplatesComponent } from './view/recommended-templates/recommended-templates.component';
+import { TemplateListViewComponent } from './view/template-list-view/template-list-view.component';
+import { TemplateDetailComponent } from './view/template-detail/template-detail.component';
 
 
 
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'login', component: LoginViewComponent },
   { path: 'userform', component:UserformComponent },
   { path: 'service/detail/:id', component: ServiceDetailComponent },
-  { path: 'templates', component: RecommendedTemplatesComponent }, 
+  { path: 'templates', component: TemplateListViewComponent }, 
+  { path: 'template/detail/:id', component: TemplateDetailComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 

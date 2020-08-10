@@ -7,7 +7,7 @@
         </div>
         <div class="fillter">
             <form>
-                <div class="dropdown">
+                <!-- <div class="dropdown">
                     <span class="item">Cloud Provider</span>
                     <ng-multiselect-dropdown [settings]="dropdownSettings" 
                         [data]="dropdownListProvider"
@@ -15,7 +15,7 @@
                         (onSelectAll)="onProviderSelectAll($event)"
                         (click) = "Providerchange(selectedItemsProvider)">
                     </ng-multiselect-dropdown>
-                </div>
+                </div> -->
                 <div class="dropdown">
                     <span class="item">Category</span>
                     <ng-multiselect-dropdown [settings]="dropdownSettings" 
@@ -23,7 +23,7 @@
                     [(ngModel)]="selectedItemsCategory" name="category"  (onSelect)="onCategorySelect($event)"
                     (onSelectAll)="onCategorySelectAll($event)"
                     (click) = "Categorychange(selectedItemsCategory)">
-                </ng-multiselect-dropdown>
+                    </ng-multiselect-dropdown>
                 </div>
             </form>
         </div>       
@@ -35,7 +35,7 @@
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
                 <!-- <li class="breadcrumb-item"><a [routerLink]="['/templates']">Templates</a></li> -->
-                <li class="breadcrumb-item">Service List</li>
+                <li class="breadcrumb-item">Templates</li>
               </ol>
             </div>
             <div class = "sorting col-md-2">
@@ -43,6 +43,7 @@
                 <button *ngIf="asc" (click)="sort()" class="fa fa-sort-amount-down fa-lg"></button>
             </div>
         </div>
+
         <div class="row search">
             <div class="input-group offset-md-3 col-md-6 marB40">
                 <input type="text" 
@@ -64,10 +65,10 @@
             <p class="text-center text-muted">{{errorMessage}}</p>
         </div>
         <div class="cards">
-            <service-card class="item"
-                *ngFor = "let item of serviceListCopy"
-                [service] = "item">
-            </service-card> 
+            <template-card class="item"
+                *ngFor = "let item of templateListCopy"
+                [template] = "item">
+            </template-card> 
         </div>
     </div>
 </div>
