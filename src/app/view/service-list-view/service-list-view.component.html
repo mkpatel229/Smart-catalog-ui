@@ -9,65 +9,61 @@
             <form>
                 <div class="dropdown">
                     <span class="item">Cloud Provider</span>
-                    <ng-multiselect-dropdown [settings]="dropdownSettings" 
-                        [data]="dropdownListProvider"
-                        [(ngModel)]="selectedItemsProvider" name="provider"  (onSelect)="onProviderSelect($event)"
-                        (onSelectAll)="onProviderSelectAll($event)"
-                        (click) = "Providerchange(selectedItemsProvider)">
+                    <ng-multiselect-dropdown [settings]="dropdownSettings" [data]="dropdownListProvider"
+                        [(ngModel)]="selectedItemsProvider" name="provider" (onSelect)="onProviderSelect($event)"
+                        (onSelectAll)="onProviderSelectAll($event)" (click)="Providerchange(selectedItemsProvider)">
                     </ng-multiselect-dropdown>
                 </div>
                 <div class="dropdown">
                     <span class="item">Category</span>
-                    <ng-multiselect-dropdown [settings]="dropdownSettings" 
-                    [data]="dropdownListCategory"
-                    [(ngModel)]="selectedItemsCategory" name="category"  (onSelect)="onCategorySelect($event)"
-                    (onSelectAll)="onCategorySelectAll($event)"
-                    (click) = "Categorychange(selectedItemsCategory)">
-                </ng-multiselect-dropdown>
+                    <ng-multiselect-dropdown [settings]="dropdownSettings" [data]="dropdownListCategory"
+                        [(ngModel)]="selectedItemsCategory" name="category" (onSelect)="onCategorySelect($event)"
+                        (onSelectAll)="onCategorySelectAll($event)" (click)="Categorychange(selectedItemsCategory)">
+                    </ng-multiselect-dropdown>
+                </div>
+                <div class="dropdown">
+                    <span class="item">Approved</span>
+                    <ng-multiselect-dropdown [settings]="dropdownSettings" [data]="dropdownListApproved"
+                        [(ngModel)]="selectedItemsApproved" name="approved"
+                        (click)="Approvedchange(selectedItemsApproved)">
+                    </ng-multiselect-dropdown>
                 </div>
             </form>
-        </div>       
+        </div>
     </div>
 
     <div class="main container-fluid">
         <div class="row">
             <div class="col-md-10 navLink">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
-                <!-- <li class="breadcrumb-item"><a [routerLink]="['/templates']">Templates</a></li> -->
-                <li class="breadcrumb-item">Service List</li>
-              </ol>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
+                    <!-- <li class="breadcrumb-item"><a [routerLink]="['/templates']">Templates</a></li> -->
+                    <li class="breadcrumb-item">Service List</li>
+                </ol>
             </div>
-            <div class = "sorting col-md-2">
+            <div class="sorting col-md-2">
                 <button *ngIf="!asc" (click)="sort()" class="fa fa-sort-amount-down-alt fa-lg"></button>
                 <button *ngIf="asc" (click)="sort()" class="fa fa-sort-amount-down fa-lg"></button>
             </div>
         </div>
         <div class="row search">
             <div class="input-group offset-md-3 col-md-6 marB40">
-                <input type="text" 
-                    class="form-control border-info" 
-                    placeholder="Search . . ." 
-                    [(ngModel)]="searchText" 
-                    name="searchText"
-                    (keydown.enter)="search($event.target.value)"
-                >
+                <input type="text" class="form-control border-info" placeholder="Search . . ." [(ngModel)]="searchText"
+                    name="searchText" (keydown.enter)="search($event.target.value)">
                 <div class="input-group-append">
-                  <button class="btn btn-info" type="submit" (click)="search(searchText)">
-                    <i class="fa fa-search"></i>
-                  </button>
+                    <button class="btn btn-info" type="submit" (click)="search(searchText)">
+                        <i class="fa fa-search"></i>
+                    </button>
                 </div>
-              </div>
+            </div>
         </div>
-        <div *ngIf = "NoResult">
+        <div *ngIf="NoResult">
             <h1 class="text-center">NO Results</h1>
             <p class="text-center text-muted">{{errorMessage}}</p>
         </div>
         <div class="cards">
-            <service-card class="item"
-                *ngFor = "let item of serviceListCopy"
-                [service] = "item">
-            </service-card> 
+            <service-card class="item" *ngFor="let item of serviceListCopy" [service]="item">
+            </service-card>
         </div>
     </div>
 </div>

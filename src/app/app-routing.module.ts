@@ -16,7 +16,9 @@ const routes: Routes = [
   { path: 'login', component: LoginViewComponent },
   { path: 'userform', component:UserformComponent },
   { path: 'service/detail/:id', component: ServiceDetailComponent },
-  { path: 'templates', component: TemplateListViewComponent }, 
+  { path: 'templates', component: TemplateListViewComponent },
+  { path: 'ApprovedTemplates', component: TemplateListViewComponent },
+  { path: 'TopTemplates', component: TemplateListViewComponent }, 
   { path: 'template/detail/:id', component: TemplateDetailComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];

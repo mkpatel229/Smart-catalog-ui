@@ -98,8 +98,14 @@
       <div class="marT30 card">
         <div class="row marT30">
           <div class="col-md-12">
-            <h5>Suggestion to use this service with most popular stack</h5>
-            <div class="marB30"><span></span></div>    
+            <h5>List of Services</h5>
+            <div class="marB30">
+              <ul>
+                <li *ngFor = "let s of template.serviceList">
+                  <a [routerLink]="['/service/detail',s.id]">{{s.serviceName}}</a>
+                </li>
+              </ul>
+            </div>    
           </div>
         </div>
       </div>
