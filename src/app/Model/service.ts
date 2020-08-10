@@ -11,4 +11,5 @@ export class Service {
     tags:[];
     isApproved:boolean;
     templates:Templates[];
+    review:[];
 }

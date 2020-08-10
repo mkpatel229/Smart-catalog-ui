@@ -1,186 +1,192 @@
 <div class="grid-container">
     <div class="item1">
         <app-toolbar></app-toolbar>
+        <br />
+
+    </div>
+    <div class="header">
+        <a href="#default" class="logo">Create Your Own Stack</a>
     </div>
     <div class="item2">
-        
-  <div class="container-fluid">
-    <div class="row marT30">
-       
-    </div>
-    <div class="row marT30 marB30">
-        <div class="col-md-4 offset-md-2">
-            <h5>Create Your Architecture</h5>
-            <form #myform="ngForm" (ngSubmit)="onSubmit(myform.value)">
+        <div class="container-fluid">
+            <div class="row marT30">
 
-                <div class="form-group">
-                    <input #projectname="ngModel" ngModel name="projectname" required id="projectname" type="text"
-                        class="form-control border-info" placeholder="Enter Name for your project">
-                    <div class="alert alert-danger" *ngIf="projectname.touched && projectname.invalid">
-                        <span>Project Name is required</span>
-                    </div>
-                </div>
-                <div class="form-group">
-                <textarea #description="ngModel" 
-                        ngModel name="description" id="description" 
-                        type="text" 
-                        class="form-control border-info">
-                    </textarea>
-                 
-                    <div class="alert alert-danger" *ngIf="description.touched && description.invalid">
-                        <span>Project Type is required</span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Choose the Cloud Provider
-                        <br>
-                        <input #aws="ngModel" ngModel name="aws" type="checkbox" class="">Aws
-                        <input #gcp="ngModel" ngModel name="gcp" type="checkbox" class="marL20">GCP
-                        <input #azure="ngModel" ngModel name="azure" type="checkbox" class="marL20">Azure
-                    </label>
-                </div>
-                <div class="form-group">
-                    <select #platform="ngModel" ngModel name="platform" required id="platform" 
-                        class="form-control border-info" placeholder="Select Type of Project">
-                        <option value="" disabled selected>Select Your Platform</option>
-                        <option *ngFor="let p of platforms" [value]="p.name">{{p.name}}</option>
-                     </select>
-               </div>
-                <div class="form-group">
-                    <input #frontend="ngModel" 
-                    ngModel name="frontend" 
-                    id="frontend" type="text" 
-                    class="form-control border-info"
-                    placeholder="Enter Client-Side Stack"
-                    >
-                </div>
-                <div class="form-group">
-                    <input #backend="ngModel" 
-                    ngModel name="backend" 
-                    id="backend" type="text" 
-                    class="form-control border-info"
-                    placeholder="Enter Server-Side Stack"
-                    >
-                </div>
-                <div class="form-group">
-                    <input #webserver="ngModel" 
-                    ngModel name="webserver" 
-                    id="webserver" type="text"
-                    class="form-control border-info"
-                    placeholder="Web Server"
-                    >
-                </div>
-                <div class="form-group">
-                    <input #loadbalancer="ngModel" 
-                    ngModel name="webserver" 
-                    id="loadbalancer" type="text"
-                    class="form-control border-info"
-                    placeholder="Load Balancer"
-                    >
-                </div>
-                <div class="form-group">
-                    <select #databasetype="ngModel" ngModel name="databasetype" required id="databasetype" 
-                    class="form-control border-info" placeholder="Database Type">
-                    <option value="" disabled selected>Choose Your Database Model</option>
-                    <option *ngFor="let dt of databaseTypes" [value]="dt.name">{{dt.name}}</option>
-                 </select>
-                </div>
-                <div class="form-group">
-                    <input #database="ngModel" 
-                    ngModel name="database" 
-                    id="database" type="text" 
-                    class="form-control border-info"
-                    placeholder="Database"
-                    >
-                </div>
-                <div class="form-group">
-                    <input #caching="ngModel" 
-                    ngModel name="caching" id="caching" 
-                    type="text" 
-                    placeholder="Caching Framework"
-                    class="form-control border-info">
-                </div>
-                <div class="form-group">
-                    <label for="etc">Any Specific Requirements ??</label>
-                    <textarea #etc="ngModel" 
-                    ngModel name="etc" id="etc" type="text" 
-                    class="form-control border-info">
-                </textarea>
-                    <br />
-                    <input class="btn btn-info" type="submit" value="Submit">
-                </div>
-            </form>
-        </div>
+            </div>
+            <div class="row ">
 
-        <div class="col-md-4 offset-md-1">
-            
-            <div class="card"  *ngIf="projectname.value">
-                <div class="card-header">
-                  <h4 class="text align-self-center">Your Stack details</h4>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <span *ngIf="projectname.value">
-                            Project Title - {{projectname.value}}
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        <span *ngIf="description.value">
-                            Description - {{description.value}}
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        <span *ngIf="platform.value">
-                            Platform Type - {{platform.value}}
-                        </span>
-                    </li> 
-                    <li class="list-group-item">
-                        <span *ngIf="frontend.value">
-                            Client-Side Stack - {{frontend.value}}
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        <span *ngIf="backend.value">
-                            Server-Side Stack - {{backend.value}}
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        <span *ngIf="webserver.value">
-                            Web Server - {{webserver.value}}
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        <span *ngIf="loadbalancer.value">
-                            Load Balancer - {{loadbalancer.value}}
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        <span *ngIf="database.value">
-                            Database Type - {{databasetype.value}}
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        <span *ngIf="database.value">
-                            Database - {{database.value}}
-                        </span>
-                    </li>
-                    <li class="list-group-item">
-                        <span *ngIf="caching.value">
-                            Caching Model - {{caching.value}}
-                        </span>
-                    </li>
-                   
-                    <li class="list-group-item">
-                        <div *ngIf="etc.value">
-                            Other Requirements - {{etc.value}}
+                <div class="col-md-4 marL40">
+                    
+                    <form #myform="ngForm" (ngSubmit)="onSubmit(myform.value)">
+
+                        <div class="form-group">
+                            <label for="projectname">Project Title *</label>
+                            <input #projectname="ngModel" ngModel name="projectname" required id="projectname"
+                                type="text" class="form-control border-info" placeholder="Enter Name for your project">
+                            <div class="alert alert-danger" *ngIf="projectname.touched && projectname.invalid">
+                                <span>Project Name is required</span>
+                            </div>
                         </div>
-                    </li>
-                </ul>
-              </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea #description="ngModel" ngModel name="description" id="description" type="text"
+                                class="form-control border-info" placeholder="Describe your project">
+                    </textarea>
+                            <div class="alert alert-danger" *ngIf="description.touched && description.invalid">
+                                <span>Project Type is required</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                                <li class="check" *ngFor="let item of cloudProviders">
+                                <label for="cloud">{{item.name}} </label>
+                                  <input type="checkbox"  id="cloud"name={{item.id}} [value]=item.name
+                                  (change)="getCloudProvider($event,item.name)"
+                                  >
+                                </li>
+                        </div>
+                        <div class="form-group">
+                            <select #platform="ngModel" ngModel name="platform" required id="platform"
+                                class="form-control border-info" placeholder="Select Type of Project">
+                                <option value="" disabled selected>Select Your Platform</option>
+                                <option *ngFor="let p of platforms" [value]="p.name">{{p.name}}</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">User Interface</label>
+                                <input #frontend="ngModel" ngModel name="frontend" id="frontend" type="text"
+                                    class="form-control border-info" placeholder="Enter Client-Side Stack">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword4">Server Side</label>
+                                <input #backend="ngModel" ngModel name="backend" id="backend" type="text"
+                                    class="form-control border-info" placeholder="Enter Server-Side Stack">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Web Server</label>
+                                <input #webserver="ngModel" ngModel name="webserver" id="webserver" type="text"
+                                    class="form-control border-info" placeholder="Web Server">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail4">Load Balancer</label>
+                                <input #loadbalancer="ngModel" ngModel name="loadbalancer" id="loadbalancer" type="text"
+                                    class="form-control border-info" placeholder="Load Balancer">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="etc">Database Type</label>
+                            <select #databasetype="ngModel" ngModel name="databasetype" required id="databasetype"
+                                class="form-control border-info" placeholder="Database Type">
+                                <option value="" disabled selected>Choose Your Database Model</option>
+                                <option *ngFor="let dt of databaseTypes" [value]="dt.name">{{dt.name}}</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="etc">Database</label>
+                                <input #database="ngModel" ngModel name="database" id="database" type="text"
+                                    class="form-control border-info" placeholder="Database">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="etc">Caching Framework</label>
+                                <input #caching="ngModel" ngModel name="caching" id="caching" type="text"
+                                    placeholder="Caching Framework" class="form-control border-info">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="etc">Any Specific Requirements ??</label>
+                            <textarea #etc="ngModel" ngModel name="etc" id="etc" type="text"
+                                class="form-control border-info"
+                                placeholder="Please Specify any other requirements"
+                                >
+                </textarea>
+                            <br />
+                            <input class="btn btn-info" type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-4 offset-md-1">
+
+                    <div class="card" *ngIf="projectname.value">
+                        <div class="card-header">
+                            <h4 class="text align-self-center">Your Stack details</h4>
+                        </div>
+                        <div class="body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <span *ngIf="projectname.value">
+                                        Project Title - {{projectname.value}}
+                                    </span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span *ngIf="description.value">
+                                        Description - {{description.value}}
+                                    </span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span *ngIf="selectedCloudItems.length>0">
+                                        Cloud Providers -
+                                        <span *ngFor="let i of selectedCloudItems">
+                                              {{i}}
+                                        </span>
+                                    </span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span *ngIf="platform.value">
+                                        Platform Type - {{platform.value}}
+                                    </span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span *ngIf="frontend.value">
+                                        Client-Side Stack - {{frontend.value}}
+                                    </span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span *ngIf="backend.value">
+                                        Server-Side Stack - {{backend.value}}
+                                    </span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span *ngIf="webserver.value">
+                                        Web Server - {{webserver.value}}
+                                    </span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span *ngIf="loadbalancer.value">
+                                        Load Balancer - {{loadbalancer.value}}
+                                    </span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span *ngIf="database.value">
+                                        Database Type - {{databasetype.value}}
+                                    </span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span *ngIf="database.value">
+                                        Database - {{database.value}}
+                                    </span>
+                                </li>
+                                <li class="list-group-item">
+                                    <span *ngIf="caching.value">
+                                        Caching Model - {{caching.value}}
+                                    </span>
+                                </li>
+    
+                                <li class="list-group-item">
+                                    <div *ngIf="etc.value">
+                                        Other Requirements - {{etc.value}}
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+
         </div>
-
-
-  </div>
-   
     </div>
-  </div>
