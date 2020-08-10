@@ -16,6 +16,7 @@ export class CloudService {
   constructor(private http: HttpClient) { }
 
   serviceList:Service[];
+  templateList:Templates[];
 
   getServices(): Observable<Service[]>{
     return this.http.get<Service[]>('../assets/DATA/serviceList.json').pipe(

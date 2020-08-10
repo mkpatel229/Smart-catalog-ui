@@ -22,7 +22,7 @@ export class HomeCardComponent implements OnInit {
 
   openDetail()  
   {  
-    var url = '/service/detail/'+ this.service.id; 
+    var url = this.service?'/service/detail/'+ this.service.id:'/template/detail/'+ this.template.templateId;
      window.open(url);  
   }
 

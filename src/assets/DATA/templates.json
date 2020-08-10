@@ -5,7 +5,8 @@
     "category" : "3-Tier",
     "rating" : 2.0,
     "isApproved" : true,
-    "decription" : "Good with (Angular/React/Vue) + (Spring boot/.Net)",
+    "description" : "Good with (Angular/React/Vue) + (Spring boot/.Net)",
+    "tags" : ["AWS EC2 + Sql 2","Amazon","AWS","Amazon EC2","Compute","3-Tier","Azure SQL Database","Microsoft","Azure","Database","db"],
     "serviceList" : [
       {
         "id" : 1,
@@ -35,7 +36,8 @@
     "category" : "3-Tier",
     "rating" : 5.0,
     "isApproved" : true,
-    "decription" : "Good with (Angular/React/Vue) + (Spring boot/.Net)",
+    "description" : "Good with (Angular/React/Vue) + (Spring boot/.Net)",
+    "tags" : ["Azure SQL Database","Microsoft","Azure","Database","db","Amazon EC2","Amazon","AWS","Compute","AWS EC2 + Sql 5","3-Tier"],
     "serviceList" : [
       {
         "id" : 1,
@@ -62,10 +64,11 @@
   {
     "templateId" : 3,
     "name" : "AWS EC2 + Sql 3",
-    "category" : "3-Tier",
+    "category" : "2-Tier",
     "rating" : 3.0,
     "isApproved" : true,
-    "decription" : "Good with (Angular/React/Vue) + (Spring boot/.Net)",
+    "description" : "Good with (Angular/React/Vue) + (Spring boot/.Net)",
+    "tags" : ["AWS EC2 + Sql 3","2-Tier"],
     "serviceList" : [
       {
         "id" : 1,
