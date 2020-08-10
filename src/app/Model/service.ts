@@ -8,4 +8,5 @@ export class Service {
     specifications:any;
     tags:[];
     isApproved:boolean;
+    review:[];
 }
