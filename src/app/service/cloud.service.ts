@@ -12,7 +12,8 @@ import { Templates } from '../Model/templates.model';
 export class CloudService {
 
   service: any = [];
-  private baseUrl="http://localhost:8080/all";
+  // private baseUrl="http://localhost:8080/all";
+  private baseUrl="../assets/DATA/serviceList.json";
 
   constructor(private http: HttpClient) { }
 
