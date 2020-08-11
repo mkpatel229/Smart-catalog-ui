@@ -12,11 +12,13 @@ export class TemplateCardComponent implements OnInit {
   @Input() template: Templates;
   rating:number;
   imgUrl:string = "../../../../assets/";
+  url:string;
 
   constructor() { }
 
   ngOnInit(): void {
     //this.imgUrl = this.imgUrl + this.template.providerName + ".jpg";
+    this.url = '/template/detail/'+ this.template.templateId; 
   }
 
   getStars(){
