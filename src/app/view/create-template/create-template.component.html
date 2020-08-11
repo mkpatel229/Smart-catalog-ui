@@ -12,80 +12,123 @@
     <div class="row">
         <div class="offset-md-2 col-md-8">
             <div class="card border-info mb-3">
-                <div class="card-header">Create Custom Template</div>
+                <div class="card-header">Create Your Custom Template</div>
                 <div class="card-body">
                     <h4 class="card-title">Your Cart</h4>
                     <hr>
                     <div *ngIf="DbList.length != 0">
-                        <h5 class="card-subtitle text-muted">Database</h5>
+
                         <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width: 200px;">
+                                        <h5 class="card-subtitle text-muted">Database</h5>
+                                    </th>
+                                    <th scope="col" style="width: 350px;">Service Name</th>
+                                    <th scope="col" style="width: 200px;">Category</th>
+                                    <th scope="col" style="width: 200px;">Rating</th>
+                                    <th scope="col" style="width: 200px;">Approved</th>
+                                    <th scope="col" style="width: 200px;">Action</th>
+                                </tr>
+                            </thead>
                             <tbody>
-                                <tr class="table-light">
-                                    <td><img src="../../../assets/AWS.jpg" width="50px" height="30px" alt=""></td>
-                                    <th scope="row">First Database</th>
-                                    <td>DB</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                </tr>
-                                <tr class="table-light">
-                                    <td><img src="../../../assets/GCP.jpg" width="50px" height="30px" alt=""></td>
-                                    <th scope="row">Second Database</th>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                </tr>
-                                <tr class="table-light">
-                                    <td><img src="../../../assets/Azure.jpg" width="50px" height="30px" alt=""></td>
-                                    <th scope="row">Third Database</th>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
+                                <tr *ngFor="let db of DbList" class="table-light">
+                                    <td><img src="../../../assets/{{db.providerName}}.jpg" height="30px" alt=""></td>
+                                    <td>
+                                        <h5>{{db.serviceName}}</h5>
+                                    </td>
+                                    <td>{{db.category}}</td>
+                                    <td><rating-star  TotalStar = '5' [value] = 'db.rating' color = 'gold' style="justify-content: start;"></rating-star></td>
+                                    <td>
+                                        <img *ngIf="db.isApproved" class="approve "
+                                            src="../../../assets/shield_approval.svg">
+                                        <img *ngIf="!db.isApproved" class="approve "
+                                            src="../../../assets/shield_notapproval.svg">
+                                    </td>
+                                    <td>
+                                        <i class="fas fa-times cross" (click)="close(db)"></i>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <div *ngIf="ComputeList.length != 0">
-                        <h5 class="card-subtitle text-muted">Compute</h5>
                         <table class="table table-hover">
-                            <tbody>
-                                <tr class="table-info">
-                                    <th scope="row">First Database</th>
-                                    <td>DB</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width: 200px;">
+                                        <h5 class="card-subtitle text-muted">Compute</h5>
+                                    </th>
+                                    <th scope="col" style="width: 350px;">Service Name</th>
+                                    <th scope="col" style="width: 200px;">Category</th>
+                                    <th scope="col" style="width: 200px;">Rating</th>
+                                    <th scope="col" style="width: 200px;">Approved</th>
+                                    <th scope="col" style="width: 200px;">Action</th>
                                 </tr>
-                                <tr class="table-info">
-                                    <th scope="row">Second Database</th>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let db of ComputeList" class="table-light">
+                                    <td><img src="../../../assets/{{db.providerName}}.jpg" height="30px" alt=""></td>
+                                    <!-- <td>{{db.providerName}}</td> -->
+                                    <td>
+                                        <h5>{{db.serviceName}}</h5>
+                                    </td>
+                                    <td>{{db.category}}</td>
+                                    <td><rating-star  TotalStar = '5' [value] = 'db.rating' color = 'gold' style="justify-content: start;"></rating-star></td>
+                                    <td>
+                                        <img *ngIf="db.isApproved" class="approve "
+                                            src="../../../assets/shield_approval.svg">
+                                        <img *ngIf="!db.isApproved" class="approve "
+                                            src="../../../assets/shield_notapproval.svg">
+                                    </td>
+                                    <td>
+                                        <i class="fas fa-times cross" (click)="close(db)"></i>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <div *ngIf="StorageList.length != 0">
-                        <h5 class="card-subtitle text-muted">Storage</h5>
                         <table class="table table-hover">
-                            <tbody>
-                                <tr class="table-info">
-                                    <th scope="row">First Database</th>
-                                    <td>DB</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width: 200px;">
+                                        <h5 class="card-subtitle text-muted">Storage</h5>
+                                    </th>
+                                    <th scope="col" style="width: 350px;">Service Name</th>
+                                    <th scope="col" style="width: 200px;">Category</th>
+                                    <th scope="col" style="width: 200px;">Rating</th>
+                                    <th scope="col" style="width: 200px;">Approved</th>
+                                    <th scope="col" style="width: 200px;">Action</th>
                                 </tr>
-                                <tr class="table-info">
-                                    <th scope="row">Second Database</th>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
-                                    <td>Column content</td>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let db of StorageList" class="table-light">
+                                    <td><img src="../../../assets/{{db.providerName}}.jpg" height="30px" alt=""></td>
+                                    <!-- <td>{{db.providerName}}</td> -->
+                                    <td>
+                                        <h5>{{db.serviceName}}</h5>
+                                    </td>
+                                    <td>{{db.category}}</td>
+                                    <td><rating-star  TotalStar = '5' [value] = 'db.rating' color = 'gold' style="justify-content: start;"></rating-star></td>
+                                    <td>
+                                        <img *ngIf="db.isApproved" class="approve "
+                                            src="../../../assets/shield_approval.svg">
+                                        <img *ngIf="!db.isApproved" class="approve "
+                                            src="../../../assets/shield_notapproval.svg">
+                                    </td>
+                                    <td>
+                                        <i class="fas fa-times cross" (click)="close(db)"></i>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <hr>
-                    <button type="submit" 
-                    (click)="onTemplateSubmit()"
-                    class="btn btn-info">Submit</button>
+                    <div class="row">
+                        <button type="submit" (click)="onTemplateSubmit()" class="btn btn-info">Submit</button>
+                        <button type="submit" class="btn btn-info marL20" (click)="clear()">Clear</button>
+                    </div> 
                 </div>
             </div>
         </div>
