@@ -7,6 +7,7 @@ import { ServiceDetailComponent } from './view/service-detail/service-detail.com
 import { UserformComponent } from './view/userform/userform.component';
 import { TemplateListViewComponent } from './view/template-list-view/template-list-view.component';
 import { TemplateDetailComponent } from './view/template-detail/template-detail.component';
+import { CreateTemplateComponent } from './view/create-template/create-template.component';
 
 
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'ApprovedTemplates', component: TemplateListViewComponent },
   { path: 'TopTemplates', component: TemplateListViewComponent }, 
   { path: 'template/detail/:id', component: TemplateDetailComponent },
+  { path: 'cart', component: CreateTemplateComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 
