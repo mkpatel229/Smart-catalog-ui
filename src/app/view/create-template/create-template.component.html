@@ -83,10 +83,31 @@
                         </table>
                     </div>
                     <hr>
-                    <button type="submit" class="btn btn-info">Submit</button>
+                    <button type="submit" 
+                    (click)="onTemplateSubmit()"
+                    class="btn btn-info">Submit</button>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="container-fluid" >
+       
+        <p *ngIf="show">Best Approved  Stack
+        {{BestApprovedCombination1}} --> {{BestApprovedCombination2}} --> {{BestApprovedCombination3}}
+        </p>
+
+        <p *ngIf="show">Best UnApproved Stack
+            {{BestApprovedCombination1}} --> {{BestApprovedCombination2}} --> {{BestApprovedCombination3}}
+            </p>
+
+            <p *ngIf="show">Best Combined Stack
+                {{BestApprovedCombination1}} --> {{BestApprovedCombination2}} --> {{BestApprovedCombination3}}
+                </p>
+    </div>
 </div>
+<!-- <app-combinationtemplate
+[Sample]="Sample"
+>
+
+</app-combinationtemplate> -->

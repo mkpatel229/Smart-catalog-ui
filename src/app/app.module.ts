@@ -27,6 +27,7 @@ import { ToolbarComponent } from './view/toolbar/toolbar.component';
 import { CreateTemplateComponent } from './view/create-template/create-template.component';
 
 import { CartServiceService } from './service/cart-service.service';
+import { CombinationtemplateComponent } from './view/combinationtemplate/combinationtemplate.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { CartServiceService } from './service/cart-service.service';
     UserformComponent,
     ServiceListViewComponent,
     ToolbarComponent,
-    CreateTemplateComponent
+    CreateTemplateComponent,
+    CombinationtemplateComponent
   ],
   imports: [
     RouterModule,
