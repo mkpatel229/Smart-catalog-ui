@@ -14,10 +14,13 @@ export class HomeCardComponent implements OnInit {
   rating:number;
   imgUrl:string = "../../../../assets/";
 
+  url:string;
+
   constructor() { }
 
   ngOnInit(): void {
     this.imgUrl = this.imgUrl + this.service?.providerName + ".jpg";
+    this.url = this.service?'/service/detail/'+ this.service.id:'/template/detail/'+ this.template.templateId;
   }
 
   openDetail()  

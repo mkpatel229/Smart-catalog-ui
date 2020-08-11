@@ -1,5 +1,5 @@
 <div class="card1 card">
-    <div class="item card-header" id="title" (click)="openDetail()">
+    <div class="item card-header" id="title" [routerLink]="'/service/detail/'+ service.id">
         <h4 class="item main ">{{service.serviceName}}</h4>
         <img id="title_image" [src]="imgUrl">
     </div>
@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="footer" id="footer">
-        <h5 id="detail" (click)="openDetail()"><strong>Details</strong></h5>
+        <h5 id="detail" [routerLink]="'/service/detail/'+ service.id"><strong>Details</strong></h5>
         <i class="fa fa-plus-square fa-2x" id="addToCart" (click)="addToCart()"></i>
         <rating-star  TotalStar = '5' [value] = 'service.rating' color = 'gold' size=''></rating-star>     
     </div>  
