@@ -24,6 +24,9 @@ import { ServiceDetailComponent } from './view/service-detail/service-detail.com
 import { TemplateDetailComponent } from './view/template-detail/template-detail.component';
 import { RouterModule } from '@angular/router';
 import { ToolbarComponent } from './view/toolbar/toolbar.component';
+import { CreateTemplateComponent } from './view/create-template/create-template.component';
+
+import { CartServiceService } from './service/cart-service.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,8 @@ import { ToolbarComponent } from './view/toolbar/toolbar.component';
     RatingStarComponent,
     UserformComponent,
     ServiceListViewComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    CreateTemplateComponent
   ],
   imports: [
     RouterModule,
@@ -53,7 +57,7 @@ import { ToolbarComponent } from './view/toolbar/toolbar.component';
     MatSidenavModule,
     NgMultiSelectDropDownModule.forRoot()
   ],
-  providers: [CloudService],
+  providers: [CloudService,CartServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

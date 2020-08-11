@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Service} from '../../../Model/service'
+import { CartServiceService } from 'src/app/service/cart-service.service';
 
 @Component({
   selector: 'service-card',
@@ -12,7 +13,7 @@ export class CardComponent implements OnInit {
   rating:number;
   imgUrl:string = "../../../../assets/";
 
-  constructor() { }
+  constructor(private cartService:CartServiceService) { }
 
   ngOnInit(): void {
     this.imgUrl = this.imgUrl + this.service.providerName + ".jpg";
@@ -28,6 +29,12 @@ export class CardComponent implements OnInit {
   {  
     var url = '/service/detail/'+ this.service.id; 
      window.open(url);  
+  }
+
+  addToCart(){
+    this.cartService.CartList.push(this.service.id);
+    document.getElementById('cart').classList.remove('fa-shopping-cart');
+    document.getElementById('cart').classList.add('fa-cart-plus');
   }
 
 }
