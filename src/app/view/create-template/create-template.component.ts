@@ -14,9 +14,14 @@ export class CreateTemplateComponent implements OnInit {
   DbList: Service[] = [];
   ComputeList: Service[] = [];
   StorageList: Service[] = [];
- logicForTemplateCart
+
   approvedList:Service[]=[];
   unapprovedList:Service[]=[];
+
+  approvedRatingList:Service[]=[];
+  unapprovedRatingList:Service[]=[];
+  combinedRatingList:Service[]=[];
+
   approvedCombinationList:any[]=[];
   UnapprovedCombinationList:any[]=[];
   CombinedCombinationtList:any[]=[];
@@ -38,14 +43,7 @@ export class CreateTemplateComponent implements OnInit {
   combinedStackMessage:string="Please select enough  services To complete a stack of combination storage of database and compute";
   
 
-  approvedList: Service[] = [];
-  unapprovedList: Service[] = [];
-  approvedCombinationList: any[] = [];
-  UnapprovedCombinationList: any[] = [];
-  CombinetList: any[] = [];
-  BestApprovedCombination1: String = '';
-  BestApprovedCombination2: String = '';
-  BestApprovedCombination3: String = '';
+
 
   show: boolean = false;
 
@@ -71,32 +69,28 @@ export class CreateTemplateComponent implements OnInit {
   }
 
   onTemplateSubmit() {
-    console.log("button clicked", this.ServiceList)
+  
+    //Unapproved List
     this.unapprovedList = this.ServiceList.filter(service => service.isApproved === false);
-
+   //Approved List
+   this.approvedList = this.ServiceList.filter(service => service.isApproved === true);
 
    // check rating of the services
-  let approvedRatingList=  this.approvedList.filter(service=>service.rating >=4)
-   console.log("approved rating List",approvedRatingList);
+   this.approvedRatingList=this.approvedList.filter(service=>service.rating >=4)
+   console.log("approved rating List",this.approvedRatingList);
      
-   let approvedRatingListComputed=this.approvedList.every(element=>
-    { 
-       (element.category==="Database")
-      ||(element.category==="Compute")
-      ||(element.category==="Storage")
-    })
 
-    console.log("check value ",approvedRatingListComputed);
-   if(approvedRatingList.length<2 || approvedRatingListComputed)
+   if(this.approvedRatingList.length<2)
    {
      this.cartService.ApprovedStackMessage=this.approvedStackMessage
      console.log("Message",this.cartService.ApprovedStackMessage);
    }
    else
    {
-    let bestApprovedDb= approvedRatingList.find(service=>service.category==="Database")
-    let bestApprovedCompute= approvedRatingList.find(service=>service.category==="Compute")
-    let bestApprovedStorage= approvedRatingList.find(service=>service.category==="Storage")
+    
+    let bestApprovedDb= this.approvedRatingList.find(service=>service.category==="Database")
+    let bestApprovedCompute= this.approvedRatingList.find(service=>service.category==="Compute")
+    let bestApprovedStorage= this.approvedRatingList.find(service=>service.category==="Storage")
     
     this.BestApprovedCombination1=bestApprovedCompute!=undefined?bestApprovedCompute.serviceName:'';
     this.BestApprovedCombination2=(bestApprovedDb!=undefined?bestApprovedDb.serviceName:'');
@@ -107,17 +101,6 @@ export class CreateTemplateComponent implements OnInit {
     // check rating of the services
     let approvedRatingList = this.approvedList.filter(service => service.rating >= 4)
     console.log("approved rating List", approvedRatingList)
-
-    let bestApprovedDb = approvedRatingList.find(service => service.category === "Database")
-    let bestApprovedCompute = approvedRatingList.find(service => service.category === "Compute")
-    let bestApprovedStorage = approvedRatingList.find(service => service.category === "Storage")
-    this.BestApprovedCombination1 = bestApprovedCompute?.serviceName;
-    this.BestApprovedCombination2 = (bestApprovedDb?.serviceName);
-    this.BestApprovedCombination3 = (bestApprovedStorage?.serviceName);
-
-
-   
-
 
     this.approvedCombinationList=approvedRatingList;
     this.cartService.ApprovedList=this.approvedCombinationList;
@@ -130,28 +113,24 @@ export class CreateTemplateComponent implements OnInit {
    }
 
    // computation logic for unapproved list 
-   let unapprovedRatingList=  this.unapprovedList.filter(service=>service.rating >=4)
-   console.log("unapproved rating List",unapprovedRatingList)
+  this.unapprovedRatingList =  this.unapprovedList.filter(service=>service.rating >=4)
+   console.log("unapproved rating List",this.unapprovedRatingList)
 
-   let unApprovedRatingListComputed=this.unapprovedList.every(element=>
-    {(element.category=="Database")||(element.category=="Compute")||(element.category=="Storage")})
-
-    console.log("check value ",unApprovedRatingListComputed);
-   if(unapprovedRatingList.length<2 || unApprovedRatingListComputed)
+   if(this.unapprovedRatingList.length<2)
    {
      this.cartService.UnApprovedStackMessage=this.unapprovedStackMessage
      console.log("Message",this.cartService.UnApprovedStackMessage);
    }
    else
    {
-    let bestUnApprovedDb= unapprovedRatingList.find(service=>service.category==="Database")
-    let bestUnApprovedCompute= unapprovedRatingList.find(service=>service.category==="Compute")
-    let bestUNApprovedStorage= unapprovedRatingList.find(service=>service.category==="Storage")
+    let bestUnApprovedDb= this.unapprovedRatingList.find(service=>service.category==="Database")
+    let bestUnApprovedCompute= this.unapprovedRatingList.find(service=>service.category==="Compute")
+    let bestUNApprovedStorage= this.unapprovedRatingList.find(service=>service.category==="Storage")
     
     this.BestUnApprovedCombination1=bestUnApprovedCompute!=undefined?bestUnApprovedCompute.serviceName:'';
     this.BestUnApprovedCombination2=bestUnApprovedDb!=undefined?bestUnApprovedDb.serviceName:'';
     this.BestUnApprovedCombination3=(bestUNApprovedStorage!=undefined?bestUNApprovedStorage.serviceName:'');
-    this.UnapprovedCombinationList=unapprovedRatingList;
+    this.UnapprovedCombinationList=this.unapprovedRatingList;
 
     this.cartService.UnApprovedList=this.UnapprovedCombinationList;
     console.log("unapproved list ",this.cartService.UnApprovedList);
@@ -162,28 +141,25 @@ export class CreateTemplateComponent implements OnInit {
    }
 
     // computation logic for combined list 
-   let combinedRatingList=  this.ServiceList.filter(service=>service.rating >=4)
-   console.log("combined rating List",combinedRatingList)
+   this.combinedRatingList=  this.ServiceList.filter(service=>service.rating >=4)
+   console.log("combined rating List",this.combinedRatingList)
 
-   let combinedRatingListComputed=this.ServiceList.every(element=>
-    {(element.category=="Database")||(element.category=="Compute")||(element.category=="Storage")})
-
-    console.log("check value ",combinedRatingListComputed);
-   if(combinedRatingList.length<2 || combinedRatingListComputed)
+   
+   if(this.combinedRatingList.length<2)
    {
      this.cartService.CombinedStackMessage=this.combinedStackMessage
      console.log("Message",this.cartService.CombinedStackMessage);
    }
    else
    {
-    let bestCombinedDb= combinedRatingList.find(service=>service.category==="Database")
-    let bestCombinedCompute= combinedRatingList.find(service=>service.category==="Compute")
-    let bestCombinedStorage= combinedRatingList.find(service=>service.category==="Storage")
+    let bestCombinedDb= this.combinedRatingList.find(service=>service.category==="Database")
+    let bestCombinedCompute= this.combinedRatingList.find(service=>service.category==="Compute")
+    let bestCombinedStorage= this.combinedRatingList.find(service=>service.category==="Storage")
     
     this.BestCombinedCombination1=bestCombinedCompute!=undefined?bestCombinedCompute.serviceName:'';
     this.BestCombinedCombination2=bestCombinedDb!=undefined?bestCombinedDb.serviceName:'';
     this.BestCombinedCombination3=(bestCombinedStorage!=undefined?bestCombinedStorage.serviceName:'');
-    this.CombinedCombinationtList=combinedRatingList;
+    this.CombinedCombinationtList=this.combinedRatingList;
 
     this.cartService.CombinedList=this.CombinedCombinationtList;
     console.log("combined list ",this.cartService.CombinedList);
@@ -192,18 +168,6 @@ export class CreateTemplateComponent implements OnInit {
     this.cartService.BestCombinedCombination2=this.BestCombinedCombination2.toString();
     this.cartService.BestCombinedCombination3=this.BestCombinedCombination3.toString();
    }
-
-
-    this.approvedCombinationList = approvedRatingList;
-    if (approvedRatingList.length > 0) {
-      this.show = !this.show;
-    }
-
-    let unapprovedRatingList = this.unapprovedList.filter(service => service.rating >= 4)
-    console.log("unapproved rating List", unapprovedRatingList)
-
-    let combinedRatingList = this.ServiceList.filter(service => service.rating >= 4)
-    console.log("combined rating List", combinedRatingList)
 
   }
 
