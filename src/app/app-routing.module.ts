@@ -8,6 +8,7 @@ import { UserformComponent } from './view/userform/userform.component';
 import { TemplateListViewComponent } from './view/template-list-view/template-list-view.component';
 import { TemplateDetailComponent } from './view/template-detail/template-detail.component';
 import { CreateTemplateComponent } from './view/create-template/create-template.component';
+import { CombinationtemplateComponent } from './view/combinationtemplate/combinationtemplate.component';
 
 
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'TopTemplates', component: TemplateListViewComponent }, 
   { path: 'template/detail/:id', component: TemplateDetailComponent },
   { path: 'cart', component: CreateTemplateComponent},
+  {path:'combination',component:CombinationtemplateComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 
