@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Stack } from '../Model/Stack';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,9 @@ export class CartServiceService {
   ApprovedList=[];
   UnApprovedList=[];
   CombinedList=[];
+
+  approveStackArray:any[]=[];
+
   ApprovedStackMessage="";
   UnApprovedStackMessage="";
   CombinedStackMessage="";
@@ -26,5 +30,8 @@ export class CartServiceService {
   BestCombinedCombination2='';
   BestCombinedCombination3='';
 
+  approvedStack:Stack;
+  unApprovedStack:Stack;
+  combinedStack:Stack;
   constructor() { }
 }

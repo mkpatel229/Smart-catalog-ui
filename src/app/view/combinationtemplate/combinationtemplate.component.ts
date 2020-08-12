@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Service } from 'src/app/Model/service';
 import { CartServiceService } from 'src/app/service/cart-service.service';
+import { Stack } from 'src/app/Model/Stack';
 
 @Component({
   selector: 'app-combinationtemplate',
@@ -14,6 +15,7 @@ export class CombinationtemplateComponent implements OnInit {
   ApprovedList=[];
   UnApprovedList=[];
   CombinedList=[];
+  approveStackArray:any[]=[];
 
   ApprovedStackMessage="";
   UnApprovedStackMessage="";
@@ -49,6 +51,9 @@ export class CombinationtemplateComponent implements OnInit {
     this.ApprovedStackMessage=this.cartservice.ApprovedStackMessage
     this.UnApprovedStackMessage=this.cartservice.UnApprovedStackMessage
     this.CombinedStackMessage=this.cartservice.CombinedStackMessage
+
+    this.approveStackArray=this.cartservice.approveStackArray;
+    console.log("Approve Stack Array",this.approveStackArray)
   }
 
 

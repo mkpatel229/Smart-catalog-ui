@@ -5,6 +5,7 @@
                 <li class="breadcrumb-item"><a [routerLink]="['/home']">Home</a></li>
                 <li class="breadcrumb-item"><a [routerLink]="['/serviceList']">Service List</a></li>
                 <li class="breadcrumb-item">Final Cart Components</li>
+                
             </ol>
         </div>
     </div>
@@ -14,81 +15,48 @@
             <div class="card border-info mb-3">
                 <div class="card-header">Based On Your Selection</div>
                 <div class="card-body">
-                    <h4 class="card-title">Your Cart</h4>
+                    <h4 class="card-title"></h4>
                     <hr>
-                    <h5 class="card-subtitle">Approved Cobination Stack</h5>
+                    <h5 class="card-subtitle">Approved Combination Stack</h5>
                     <div >
 
                         <table class="table table-hover">
                             <thead>
-                                
-                                <tr>
-                                    <th scope="col" style="width: 200px;"> 
-                                    </th>
-                                    <th scope="col" style="width: 350px;">Service Name</th>
-                                    <th scope="col" style="width: 200px;">Category</th>
-                                    <th scope="col" style="width: 200px;">Rating</th>
-                                    <th scope="col" style="width: 200px;">Approved</th>
-                                    <th scope="col" style="width: 200px;">Action</th>
+                                <tr *ngIf="approveStackArray.length>0">
+                                <th>Provider Name</th>
+                                <th>Service Name</th>
+                                <th>Category</th>
+                                <th>Rating</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr  class="table-light">
-                                    <td><img src="" height="30px" alt=""></td>
-                                    <td>
-                                        <h5>Compute</h5>
+   
+                                    <td *ngFor="let approve of approveStackArray">
+                                        <h5>{{approve.providerName}}  {{approve.ServiceName}} {{approve.category}} {{approve.rating}}</h5>
                                     </td>
-                                    <td>Database</td>
-                                    
-                                    <td>
-                                        <!-- <img *ngIf="db.isApproved" class="approve "
-                                            src="../../../assets/shield_approval.svg">
-                                        <img *ngIf="!db.isApproved" class="approve "
-                                            src="../../../assets/shield_notapproval.svg"> -->
+                                    <td *ngIf="ApprovedStackMessage.length>0">
+                                        <h5>{{ApprovedStackMessage}}</h5>
                                     </td>
-                                    <td>
-                                        <i class="fas fa-times cross"></i>
-                                    </td>
+                        
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <div class="card-body">
-                        <h5 class="card-subtitle">UnApproved Cobination Stack</h5>
+                        <h5 class="card-subtitle">UnApproved Combination Stack</h5>
                         <div >
     
                             <table class="table table-hover">
                                 <thead>
-                                    
-                                    <tr>
-                                        <th scope="col" style="width: 200px;"> 
-                                        </th>
-                                        <th scope="col" style="width: 350px;">Service Name</th>
-                                        <th scope="col" style="width: 200px;">Category</th>
-                                        <th scope="col" style="width: 200px;">Rating</th>
-                                        <th scope="col" style="width: 200px;">Approved</th>
-                                        <th scope="col" style="width: 200px;">Action</th>
-                                    </tr>
                                 </thead>
                                 <tbody>
                                     <tr  class="table-light">
                                         <td><img src="" height="30px" alt=""></td>
                                         <td>
-                                            <h5>{{BestUnApprovedCombination1}}</h5>
-                                            <h5>{{BestUnApprovedCombination1}}</h5>
-                                            <h5>{{BestUnApprovedCombination1}}</h5>
-                                        </td>
-                                        <td>{{BestUnApprovedCombination2}}</td>
-                                        
-                                        <td>
-                                            <!-- <img *ngIf="db.isApproved" class="approve "
-                                                src="../../../assets/shield_approval.svg">
-                                            <img *ngIf="!db.isApproved" class="approve "
-                                                src="../../../assets/shield_notapproval.svg"> -->
-                                        </td>
-                                        <td>
-                                            <i class="fas fa-times cross"></i>
+                                            <h5>{{BestUnApprovedCombination1}} {{BestUnApprovedCombination2}} {{BestUnApprovedCombination3}}</h5>
+                            
                                         </td>
                                     </tr>
                                 </tbody>
@@ -96,33 +64,19 @@
                         </div>
 
                         <div class="card-body">
-                            <h5 class="card-subtitle">Combined Cobination Stack</h5>
+                            <h5 class="card-subtitle">Combined Combination Stack</h5>
                             <div >
         
                                 <table class="table table-hover">
-                                    <thead>
-                                        
-                                        <tr>
-                                            <th scope="col" style="width: 200px;"> 
-                                            </th>
-                                            <th scope="col" style="width: 350px;">Service Name</th>
-                                            <th scope="col" style="width: 200px;">Category</th>
-                                            <th scope="col" style="width: 200px;">Rating</th>
-                                            <th scope="col" style="width: 200px;">Approved</th>
-                                            <th scope="col" style="width: 200px;">Action</th>
-                                        </tr>
-                                    </thead>
+                                   
                                     <tbody>
                                         <tr  class="table-light">
                                             <td><img src="" height="30px" alt=""></td>
                                             <td>
-                                                <h5>Compute</h5>
+                                                <h5>{{BestCombinedCombination1}} {{BestCombinedCombination2}} {{BestCombinedCombination3}}</h5>
+
                                             </td>
-                                            <td>Database</td>
-                                
-                                            <td>
-                                                <i class="fas fa-times cross"></i>
-                                            </td>
+                
                                         </tr>
                                     </tbody>
                                 </table>
@@ -135,3 +89,6 @@
             </div>
         </div>
     </div>
+
+
+    
