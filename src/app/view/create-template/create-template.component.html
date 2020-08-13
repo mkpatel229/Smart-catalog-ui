@@ -38,7 +38,10 @@
                                         <h5>{{db.serviceName}}</h5>
                                     </td>
                                     <!-- <td>{{db.category}}</td> -->
-                                    <td><rating-star  TotalStar = '5' [value] = 'db.rating' color = 'gold' style="justify-content: start;"></rating-star></td>
+                                    <td>
+                                        <rating-star TotalStar='5' [value]='db.rating' color='gold'
+                                            style="justify-content: start;"></rating-star>
+                                    </td>
                                     <td>
                                         <img *ngIf="db.isApproved" class="approve "
                                             src="../../../assets/shield_approval.svg">
@@ -74,7 +77,10 @@
                                         <h5>{{db.serviceName}}</h5>
                                     </td>
                                     <!-- <td>{{db.category}}</td> -->
-                                    <td><rating-star  TotalStar = '5' [value] = 'db.rating' color = 'gold' style="justify-content: start;"></rating-star></td>
+                                    <td>
+                                        <rating-star TotalStar='5' [value]='db.rating' color='gold'
+                                            style="justify-content: start;"></rating-star>
+                                    </td>
                                     <td>
                                         <img *ngIf="db.isApproved" class="approve "
                                             src="../../../assets/shield_approval.svg">
@@ -110,7 +116,10 @@
                                         <h5>{{db.serviceName}}</h5>
                                     </td>
                                     <!-- <td>{{db.category}}</td> -->
-                                    <td><rating-star  TotalStar = '5' [value] = 'db.rating' color = 'gold' style="justify-content: start;"></rating-star></td>
+                                    <td>
+                                        <rating-star TotalStar='5' [value]='db.rating' color='gold'
+                                            style="justify-content: start;"></rating-star>
+                                    </td>
                                     <td>
                                         <img *ngIf="db.isApproved" class="approve "
                                             src="../../../assets/shield_approval.svg">
@@ -126,9 +135,9 @@
                     </div>
                     <hr>
                     <div class="row">
-                        <button type="submit" routerLink="/combination" (click)="onTemplateSubmit()" class="btn btn-info">Submit</button>
+                        <button type="submit" (click)="onTemplateSubmit()" class="btn btn-info">Submit</button>
                         <button type="submit" class="btn btn-info marL20" (click)="clear()">Clear</button>
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>

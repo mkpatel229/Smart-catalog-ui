@@ -16,14 +16,14 @@ const routes: Routes = [
   { path: 'home', component: HomeViewComponent },
   { path: 'serviceList', component: ServiceListViewComponent },
   { path: 'login', component: LoginViewComponent },
-  { path: 'userform', component:UserformComponent },
+  { path: 'userform', component: UserformComponent },
   { path: 'service/detail/:id', component: ServiceDetailComponent },
   { path: 'templates', component: TemplateListViewComponent },
   { path: 'ApprovedTemplates', component: TemplateListViewComponent },
-  { path: 'TopTemplates', component: TemplateListViewComponent }, 
+  { path: 'TopTemplates', component: TemplateListViewComponent },
   { path: 'template/detail/:id', component: TemplateDetailComponent },
-  { path: 'cart', component: CreateTemplateComponent},
-  {path:'combination',component:CombinationtemplateComponent},
+  { path: 'cart', component: CreateTemplateComponent },
+  { path: 'combination', component: CombinationtemplateComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 
