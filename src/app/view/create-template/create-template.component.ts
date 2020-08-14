@@ -54,6 +54,7 @@ export class CreateTemplateComponent implements OnInit {
 
   show: boolean = false;
   flag: boolean = false;
+  disable: boolean = true;
 
   constructor(private cartService: CartServiceService, private CloudService: CloudService, private router: Router) {
     this.cartService.CartList.forEach(element => {
@@ -68,11 +69,15 @@ export class CreateTemplateComponent implements OnInit {
         else if (s.category == "Storage") {
           this.StorageList.push(s);
         }
+        if(this.ServiceList.length != 0){
+          this.disable = false;
+        }
       })
     });
   }
 
   ngOnInit(): void {
+
   }
 
   getApprovedList() {

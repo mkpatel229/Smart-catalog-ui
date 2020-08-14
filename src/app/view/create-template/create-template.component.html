@@ -12,9 +12,9 @@
     <div class="row">
         <div class="offset-md-2 col-md-8">
             <div class="card border-info mb-3">
-                <div class="card-header">Create Your Custom Template</div>
+                <div class="card-header">Create Custom Template</div>
                 <div class="card-body">
-                    <h4 class="card-title">Your Cart</h4>
+                    <h4 class="card-title">Your Custom Template</h4>
                     <hr>
                     <div *ngIf="DbList.length != 0">
 
@@ -135,7 +135,8 @@
                     </div>
                     <hr>
                     <div class="row">
-                        <button type="submit" (click)="onTemplateSubmit()" class="btn btn-info">Submit</button>
+                        <button *ngIf="disable" type="submit" (click)="onTemplateSubmit()" class="btn btn-info" disabled>Submit</button>
+                        <button *ngIf="!disable" type="submit" (click)="onTemplateSubmit()" class="btn btn-info">Submit</button>
                         <button type="submit" class="btn btn-info marL20" (click)="clear()">Clear</button>
                     </div>
                 </div>
